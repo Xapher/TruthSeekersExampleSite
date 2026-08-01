@@ -1,5 +1,12 @@
 {
-	"FilePath": "Test?",
-	"SheetSideOne":"Test2",
-	"SheetTwo":"HUH"
+	"FileContents":{
+		"FilePath": "Test?",
+		"SheetSideOne":"Test2",
+		"SheetTwo":"HUH"
+	},
+	"TextTranscript": [
+		"With this lesson we begin our introduction to the world's most amazing book.",
+		"In this lesson we look at the Bible, How it is made up and the circumstances in which it was written. It will cover two diagrams: \"The Book of Books\" and \"The incomparable Book.\"",
+		"The second lesson will be based on the diagram \"A Relationship Broken.\", It helps us to see our real need for the message of the Bible."
+	]
 }

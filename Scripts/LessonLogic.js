@@ -1,4 +1,4 @@
-var SelectedTape = "Peter Merrick - The Imcomparable Book (Lesson One) side _Side_.mp3";
+var SelectedTape = "The Imcomparable Book (Lesson One) side _Side_.mp3";
 var BaseDir = "./Content/Audio/";
 var FileBase = "Peter Merrick - ";
 var TapeSide = 1;
@@ -32,7 +32,6 @@ function InitializeLessons() {
 		InitializeMobile();
 	}
 	LoadTapeAndSide();
-
 	LoadLesson();
 }
 
