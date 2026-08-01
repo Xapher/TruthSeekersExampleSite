@@ -117,6 +117,10 @@ function LoadLesson() {
   .then(data => LessonJSON = data)
   .catch(error => console.error('Error:', error));
 
+
   SelectedTape = LessonJSON["FileContents"]["FilePath"];
   
+  for (var i = 0; i < LessonJSON["TextTranscript"].length; i++) {
+  	LessonTranscript.innerHTML += "<p>" + LessonJSON["TextTranscript"][i] + "</p>";
+  }
 }
