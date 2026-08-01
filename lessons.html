@@ -25,6 +25,15 @@
 
 
 	<section id="lessons" class="page">
+        <div style="display:flex;flex-direction:row;justify-content: center;" class="mobile centered">
+            <h1>Lessons:</h1>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+        </div>
         <div class="split-layout">
             <!-- Left: PDF Worksheet -->
             <div id="LeftColumn" class="left-column">
@@ -44,8 +53,7 @@
 
 
     <div class="widescreen" id="DesktopSwitcher">
-        <button id="WorkSheetSwitcher">Change Worksheet Side</button>
-        <button id="TranscriptSwitcher">Show/Hide Transcript</button>
+        <button onclick="ChangeSheetSide()" id="WorkSheetSwitcher">Change Worksheet Side</button>
         <button id="TapeSide" onclick="SwitchSides()">Switch to Side: 2</button>
     </div>
 

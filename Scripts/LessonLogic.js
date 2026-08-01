@@ -58,6 +58,35 @@ function LoadTapeAndSide(){
 	LessonAudio.load();
 }
 
+var worksheet = 1;
+function ChangeSheetSide() {
+	if(worksheet == 1){
+		IframeSheet.src = "./Content/LessonSheets/LessonOneSideTwo.html";
+		worksheet = 2;
+	}
+	else {
+		IframeSheet.src = "./Content/LessonSheets/LessonOneSideOne.html";
+		worksheet = 1;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 var MobileFunction;
@@ -67,6 +96,9 @@ function PressMobileButton(argument) {
 }
 
 
+
+
+
 function InitializeMobile(){
 	MobileFunction = ChangeMobileSheetSide;
 	LeftColumn.classList.remove('non-active');
@@ -74,12 +106,14 @@ function InitializeMobile(){
 
 	RightColumn.classList.add('non-active');
 	LeftColumn.classList.add('active');
+	IframeSheet.src = "./Content/LessonSheets/LessonOneSideOne.html";
 	//LeftColumn = first page
 }
 
 function ChangeMobileSheetSide(){
 	MobileFunction = ShowMobileTranscript;
 	//LeftColumn = second page
+	IframeSheet.src = "./Content/LessonSheets/LessonOneSideTwo.html";
 }
 
 function ShowMobileTranscript(){
@@ -91,6 +125,8 @@ function ShowMobileTranscript(){
 	LeftColumn.classList.add('non-active');
 	RightColumn.classList.add('active');
 }
+
+
 
 
 

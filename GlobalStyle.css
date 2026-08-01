@@ -127,3 +127,8 @@ button:hover, .ActiveButton {
         visibility: hidden;
     }
 }
+
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+}

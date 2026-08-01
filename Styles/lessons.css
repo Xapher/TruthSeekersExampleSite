@@ -120,6 +120,7 @@ iframe {
 
     #lessons{
         margin: 0;
+        width: 100%;
     }
 
     .left-column {
