@@ -1,6 +1,6 @@
  /* Base Styles */
 :root {
-    --primary: #2563eb;
+    --primary: #2222AA;
     --bg-color: #f8fafc;
     --text-color: #1e293b;
     --border-color: #e2e8f0;
@@ -30,8 +30,7 @@ header {
 }
 
 .icon-placeholder {
-    width: 56px;
-    height: 56px;
+    max-width: 256px;
     background-color: var(--primary);
     color: white;
     border-radius: 14px;
@@ -98,7 +97,7 @@ button {
     text-align: left;
     cursor: pointer;
     font-size: 1rem;
-    transition: all 0.2;
+    font-weight: bolder;
 }
 
 button:hover, .ActiveButton {
@@ -117,6 +116,10 @@ button:hover, .ActiveButton {
     }
 }
 
+p {
+    font-size: 24px;
+    font-weight: bold;
+}
 
 @media (max-width: 768px) {
     .mobile {
@@ -131,4 +134,8 @@ button:hover, .ActiveButton {
 .centered {
     margin-left: auto;
     margin-right: auto;
+}
+
+img{
+    max-width: 100%;
 }
