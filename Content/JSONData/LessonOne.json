@@ -1,5 +1,5 @@
 {
-	FilePath="Test?",
-	SheetSideOne="Test2",
-	SheetTwo="HUH"
+	"FilePath": "Test?",
+	"SheetSideOne":"Test2",
+	"SheetTwo":"HUH"
 }

@@ -10,6 +10,7 @@ var FlipButton;
 
 var LeftColumn;
 var RightColumn;
+var IframeSheet;
 
 window.onload = function() {
 	InitializeLessons();
@@ -24,6 +25,7 @@ function InitializeLessons() {
 	FlipButton = document.getElementById('TapeSide');
 	LeftColumn = document.getElementById('LeftColumn');
 	RightColumn = document.getElementById('RightColumn');
+	IframeSheet = document.getElementById('SheetContainer');
 	if(isMobile()){
 		RightColumn.classList.add('non-active');
 		LeftColumn.classList.add('active');
@@ -49,7 +51,7 @@ function SwitchSides(){
 
 function LoadTapeAndSide(){
 	console.log(LessonAudio);
-	LessonAudio.src = BaseDir + SelectedTape.replace("_Side_", TapeSide);
+	LessonAudio.src = BaseDir + FileBase + SelectedTape.replace("_Side_", TapeSide);
 	LessonAudio.load();
 }
 
@@ -107,7 +109,7 @@ function isMobile() {
 
 
 function LoadLesson() {
-	fetch('./Contnt/JSONData/LessonOne.json')
+	fetch('./Content/JSONData/LessonOne.json')
   .then(response => response.json())
   .then(data => console.log(data))
   .catch(error => console.error('Error:', error));
