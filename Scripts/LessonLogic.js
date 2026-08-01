@@ -1,8 +1,9 @@
 var SelectedTape = "Peter Merrick - The Imcomparable Book (Lesson One) side _Side_.mp3";
-var BaseDir = "./Audio/";
+var BaseDir = "./Content/Audio/";
+var FileBase = "Peter Merrick - ";
 var TapeSide = 1;
 
-var Lessons =["Peter Merrick - The Imcomparable Book (Lesson One) side _Side_.mp3", "Lesson Two"];
+var Lessons =["The Imcomparable Book (Lesson One) side _Side_.mp3", "A Relationship Broken (Lesson 2) side _Side_.mp3"];
 
 var LessonAudio;
 var FlipButton;
@@ -106,7 +107,7 @@ function isMobile() {
 
 
 function LoadLesson() {
-	fetch('https://api.example.com/data.json')
+	fetch('./Contnt/JSONData/LessonOne.json')
   .then(response => response.json())
   .then(data => console.log(data))
   .catch(error => console.error('Error:', error));
