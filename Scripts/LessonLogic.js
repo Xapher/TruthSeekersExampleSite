@@ -112,15 +112,19 @@ function isMobile() {
 
 
 function LoadLesson() {
+	LessonTranscript.innerHTML = "";
 	fetch('./Content/JSONData/LessonOne.json')
   .then(response => response.json())
-  .then(data => LessonJSON = data)
+  .then(data => {
+  	LessonJSON = data;
+  	SelectedTape = LessonJSON["FileContents"]["FilePath"];
+  
+	  for (var i = 0; i < LessonJSON["TextTranscript"].length; i++) {
+	  	LessonTranscript.innerHTML += "<p class=\"TranscriptText\">" + LessonJSON["TextTranscript"][i] + "</p>";
+	  }
+  })
   .catch(error => console.error('Error:', error));
 
 
-  SelectedTape = LessonJSON["FileContents"]["FilePath"];
   
-  for (var i = 0; i < LessonJSON["TextTranscript"].length; i++) {
-  	LessonTranscript.innerHTML += "<p>" + LessonJSON["TextTranscript"][i] + "</p>";
-  }
 }
