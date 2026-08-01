@@ -3,7 +3,7 @@ var BaseDir = "./Content/Audio/";
 var FileBase = "Peter Merrick - ";
 var TapeSide = 1;
 
-var Lessons =["The Imcomparable Book (Lesson One) side _Side_.mp3", "A Relationship Broken (Lesson 2) side _Side_.mp3"];
+var Lessons =["", "A Relationship Broken (Lesson 2) side _Side_.mp3"];
 
 var LessonAudio;
 var FlipButton;
@@ -11,6 +11,9 @@ var FlipButton;
 var LeftColumn;
 var RightColumn;
 var IframeSheet;
+
+var LessonJSON;
+var LessonTranscript;
 
 window.onload = function() {
 	InitializeLessons();
@@ -26,13 +29,15 @@ function InitializeLessons() {
 	LeftColumn = document.getElementById('LeftColumn');
 	RightColumn = document.getElementById('RightColumn');
 	IframeSheet = document.getElementById('SheetContainer');
+	LessonTranscript = document.getElementById('LessonTranscript');
 	if(isMobile()){
 		RightColumn.classList.add('non-active');
 		LeftColumn.classList.add('active');
 		InitializeMobile();
 	}
-	LoadTapeAndSide();
 	LoadLesson();
+	LoadTapeAndSide();
+	
 }
 
 function SwitchSides(){
@@ -49,7 +54,6 @@ function SwitchSides(){
 }
 
 function LoadTapeAndSide(){
-	console.log(LessonAudio);
 	LessonAudio.src = BaseDir + FileBase + SelectedTape.replace("_Side_", TapeSide);
 	LessonAudio.load();
 }
@@ -110,6 +114,9 @@ function isMobile() {
 function LoadLesson() {
 	fetch('./Content/JSONData/LessonOne.json')
   .then(response => response.json())
-  .then(data => console.log(data))
+  .then(data => LessonJSON = data)
   .catch(error => console.error('Error:', error));
+
+  SelectedTape = LessonJSON["FileContents"]["FilePath"];
+  
 }
