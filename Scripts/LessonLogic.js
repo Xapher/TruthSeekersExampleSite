@@ -106,4 +106,8 @@ function isMobile() {
 
 
 function LoadLesson() {
+	fetch('https://api.example.com/data.json')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
 }
