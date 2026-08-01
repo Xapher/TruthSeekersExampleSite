@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson Portal</title>
+    <style>
+        /* Base Styles */
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --text-color: #1e293b;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header & Icon */
+        header {
+            text-align: center;
+            padding: 2rem 1rem 1rem;
+            background-color: white;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .icon-placeholder {
+            width: 64px;
+            height: 64px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 0.5rem auto;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        header h1 {
+            font-size: 1.25rem;
+            color: var(--text-color);
+        }
+
+        /* Navigation */
+        nav {
+            background-color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: #eff6ff;
+            color: var(--primary);
+        }
+
+        /* Main Content Area */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding-bottom: 80px; /* Space for the locked audio player */
+        }
+
+        .page {
+            display: none;
+            flex: 1;
+            padding: 2rem;
+            height: 100%;
+        }
+
+        .page.active {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Home Page */
+        #home {
+            align-items: center;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Lessons Page */
+        .split-layout {
+            display: flex;
+            gap: 2rem;
+            flex: 1;
+            height: calc(100vh - 300px); /* Adjusts for header/nav/player */
+        }
+
+        .left-column, .right-column {
+            flex: 1;
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .right-column {
+            padding: 1.5rem;
+            overflow-y: auto;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Audio Player Locked to Bottom */
+        .audio-player-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            border-top: 1px solid var(--border-color);
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.05);
+            z-index: 100;
+            display: none; /* Hidden by default, shown only on Lessons page */
+        }
+
+        .audio-player-container.active {
+            display: flex;
+        }
+
+        audio {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        /* Downloads Page */
+        .downloads-layout {
+            display: flex;
+            gap: 2rem;
+            flex: 1;
+        }
+
+        .buttons-sidebar {
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .download-btn {
+            padding: 1rem;
+            background-color: white;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            text-align: left;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+
+        .download-btn:hover, .download-btn.active {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .preview-area {
+            flex: 1;
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 500px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="icon-placeholder">LC</div>
+        <h1>Learning Center</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a onclick="showPage('home')" class="nav-link active" id="nav-home">Home</a>
+        <a onclick="showPage('lessons')" class="nav-link" id="nav-lessons">Lessons</a>
+        <a onclick="showPage('downloads')" class="nav-link" id="nav-downloads">Downloads</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Home Page -->
+        <section id="home" class="page active">
+            <h2>Welcome to the Learning Center</h2>
+            <p style="margin-top: 1rem; line-height: 1.6; color: #64748b;">
+                This is a simple landing page. Select "Lessons" from the menu above to view your interactive worksheet and transcript side-by-side, or click "Downloads" to grab PDFs for offline use.
+            </p>
+        </section>
+
+        <!-- Lessons Page -->
+        <section id="lessons" class="page">
+            <div class="split-layout">
+                <!-- Left: PDF Worksheet -->
+                <div class="left-column">
+                    <!-- Using a dummy PDF service for the placeholder -->
+                    <iframe src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" title="Lesson Worksheet"></iframe>
+                </div>
+                
+                <!-- Right: Transcript -->
+                <div class="right-column">
+                    <h2>Lesson Transcript</h2>
+                    <p style="margin-top: 1rem; line-height: 1.8;">
+                        <strong>[00:00] Instructor:</strong> Welcome to today's lesson. If you are following along, please look at the worksheet on the left side of your screen.<br><br>
+                        <strong>[00:15] Instructor:</strong> Today we are going to cover the fundamentals. You can read this text while listening to the audio player locked to the bottom of the page.<br><br>
+                        <em>(Transcript continues with placeholder text...)</em><br><br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        <br><br>
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Downloads Page -->
+        <section id="downloads" class="page">
+            <div class="downloads-layout">
+                <!-- Left: Buttons -->
+                <div class="buttons-sidebar">
+                    <h3>Select a Lesson</h3>
+                    <br>
+                    <button class="download-btn active" onclick="loadPdf('lesson1', this)">Lesson 1: Introduction</button>
+                    <button class="download-btn" onclick="loadPdf('lesson2', this)">Lesson 2: The Basics</button>
+                    <button class="download-btn" onclick="loadPdf('lesson3', this)">Lesson 3: Intermediate</button>
+                    <button class="download-btn" onclick="loadPdf('lesson4', this)">Lesson 4: Advanced</button>
+                    <button class="download-btn" onclick="loadPdf('lesson5', this)">Lesson 5: Expert</button>
+                    <button class="download-btn" onclick="loadPdf('lesson6', this)">Lesson 6: Conclusion</button>
+                </div>
+                
+                <!-- Right: PDF Preview -->
+                <div class="preview-area">
+                    <iframe id="download-preview-frame" src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" title="PDF Preview"></iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Locked Audio Player -->
+    <div class="audio-player-container" id="global-audio-player">
+        <!-- Using a blank MP3 placeholder. Replace src with your actual audio file -->
+        <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Remove active class from all nav links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // Show selected page and set active nav link
+            document.getElementById(pageId).classList.add('active');
+            document.getElementById('nav-' + pageId).classList.add('active');
+
+            // Handle the audio player visibility (only show on lessons page)
+            const audioPlayer = document.getElementById('global-audio-player');
+            if (pageId === 'lessons') {
+                audioPlayer.classList.add('active');
+            } else {
+                audioPlayer.classList.remove('active');
+            }
+        }
+
+        function loadPdf(lessonId, buttonElement) {
+            // Remove active class from all download buttons
+            document.querySelectorAll('.download-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Add active class to clicked button
+            buttonElement.classList.add('active');
+
+            // Update the iframe source based on the lesson
+            // For this example, we're just loading a dummy PDF and appending a query string so you can see it reload
+            const iframe = document.getElementById('download-preview-frame');
+            iframe.src = `https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf?lesson=${lessonId}`;
+        }
+    </script>
+</body>
+</html>

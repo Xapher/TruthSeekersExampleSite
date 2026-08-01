@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Of The Bible - Downloads</title>
+    <link rel="stylesheet" type="text/css" href="GlobalStyle.css">
+    <link rel="stylesheet" type="text/css" href="./Styles/downloads.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="icon-placeholder">LC</div>
+        <h1>Learning Center</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="nav-link" id="nav-home">Home</a>
+        <a href="lessons.html" class="nav-link" id="nav-lessons">Lessons</a>
+        <a href="downloads.html" class="nav-link" id="nav-downloads">Downloads</a>
+    </nav>
+
+
+	<section id="downloads" class="page">
+        <div class="downloads-layout">
+            <!-- Left: Buttons -->
+            <div class="buttons-sidebar">
+                <button class="ActiveButton" onclick="loadPdf('lesson1', this)">Lesson 1: Introduction</button>
+                <button class="" onclick="loadPdf('lesson2', this)">Lesson 2: The Basics</button>
+                <button class="" onclick="loadPdf('lesson3', this)">Lesson 3: Intermediate</button>
+                <button class="" onclick="loadPdf('lesson4', this)">Lesson 4: Advanced</button>
+                <button class="" onclick="loadPdf('lesson5', this)">Lesson 5: Expert</button>
+                <button class="" onclick="loadPdf('lesson6', this)">Lesson 6: Conclusion</button>
+            </div>
+            
+            <!-- Right: PDF Preview -->
+            <div class="preview-area">
+                <iframe id="download-preview-frame" src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" title="PDF Preview"></iframe>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+</html>

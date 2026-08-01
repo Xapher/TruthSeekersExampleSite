@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book of Books - Side Two</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d3d3d3;
+        }
+
+        .page-container {
+            background-color: #ffffff;
+            max-width: 940px;
+            margin: 40px auto;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .divider-line {
+            border: none;
+            border-top: 3px solid #000;
+            border-bottom: 1px solid #000;
+            height: 2px;
+            margin: 40px 0 20px 0;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 40px;
+            font-weight: normal;
+        }
+
+        .books-layout {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .books-column {
+            flex: 1;
+        }
+        
+        .books-subtitle {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        /* Simulated Books CSS */
+        .book-stack {
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: 20px;
+            min-height: 180px;
+        }
+        
+        .book-stack.multi-row {
+            flex-wrap: wrap; 
+            align-content: flex-end;
+        }
+        
+        .row-container {
+            display: flex;
+            margin-bottom: 5px;
+            width: 100%;
+        }
+
+        .book {
+            background-color: #2b2b2b;
+            color: #d9d9d9;
+            width: 32px;
+            margin-right: 3px;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 10px;
+            letter-spacing: 1px;
+            border-left: 2px solid #555;
+            border-top: 2px solid #555;
+            box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-transform: uppercase;
+        }
+
+        /* Narrow books for larger stacks */
+        .book.thin {
+            width: 24px;
+            font-size: 8.5px;
+            padding: 8px 0;
+        }
+
+        .description-text {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* Reference Image Block */
+        .reference-image-container {
+            margin-top: 60px;
+            text-align: center;
+            padding: 20px;
+            background: #eee;
+            border-top: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-container">
+        
+        <!-- Top Section (Continuing Old Testament) -->
+        <div class="books-layout">
+            <!-- Poetry Books -->
+            <div class="books-column">
+                <div class="books-subtitle">POETRY&mdash;FIVE BOOKS</div>
+                <div class="book-stack">
+                    <div class="book" style="height: 120px;">Job</div>
+                    <div class="book" style="height: 140px;">Psalms</div>
+                    <div class="book" style="height: 130px;">Proverbs</div>
+                    <div class="book" style="height: 135px;">Ecclesiastes</div>
+                    <div class="book" style="height: 140px;">Song of<br>Solomon</div>
+                </div>
+                <div class="description-text">
+                    The Israelite worshipping; pondering life,<br>
+                    suffering and God
+                </div>
+            </div>
+
+            <!-- Prophecy (OT) Books -->
+            <div class="books-column">
+                <div class="books-subtitle">PROPHECY&mdash;SEVENTEEN BOOKS</div>
+                <div class="book-stack multi-row">
+                    <div class="row-container">
+                        <div class="book thin" style="height: 130px;">Isaiah</div>
+                        <div class="book thin" style="height: 125px;">Jeremiah</div>
+                        <div class="book thin" style="height: 135px;">Lamentations</div>
+                        <div class="book thin" style="height: 120px;">Ezekial</div>
+                        <div class="book thin" style="height: 130px;">Daniel</div>
+                        <div class="book thin" style="height: 110px;">Hosea</div>
+                        <div class="book thin" style="height: 115px;">Joel</div>
+                        <div class="book thin" style="height: 125px;">Amos</div>
+                    </div>
+                    <div class="row-container">
+                        <div class="book thin" style="height: 110px;">Obadiah</div>
+                        <div class="book thin" style="height: 115px;">Jonah</div>
+                        <div class="book thin" style="height: 120px;">Micah</div>
+                        <div class="book thin" style="height: 110px;">Nahum</div>
+                        <div class="book thin" style="height: 125px;">Habakkuk</div>
+                        <div class="book thin" style="height: 130px;">Zephaniah</div>
+                        <div class="book thin" style="height: 120px;">Haggai</div>
+                        <div class="book thin" style="height: 135px;">Zechariah</div>
+                        <div class="book thin" style="height: 125px;">Malachi</div>
+                    </div>
+                </div>
+                <div class="description-text">
+                    Calling Israel back to God, warning, pointing<br>
+                    to coming of Jesus
+                </div>
+            </div>
+        </div>
+
+        <hr class="divider-line">
+        
+        <h2 class="section-title">NEW TESTAMENT</h2>
+
+        <!-- Middle Section (New Testament Pt 1) -->
+        <div class="books-layout">
+            <!-- Biography Books -->
+            <div class="books-column">
+                <div class="books-subtitle">BIOGRAPHY&mdash;FOUR BOOKS</div>
+                <div class="book-stack">
+                    <div class="book" style="height: 140px; width: 38px;">Matthew</div>
+                    <div class="book" style="height: 130px; width: 38px;">Mark</div>
+                    <div class="book" style="height: 135px; width: 38px;">Luke</div>
+                    <div class="book" style="height: 140px; width: 38px;">John</div>
+                </div>
+                <div class="description-text">
+                    The life of Christ
+                </div>
+            </div>
+
+            <!-- Epistles Books -->
+            <div class="books-column">
+                <div class="books-subtitle">EPISTLES&mdash;TWENTY-ONE BOOKS</div>
+                <div class="book-stack multi-row">
+                    <div class="row-container">
+                        <div class="book thin" style="height: 120px;">Romans</div>
+                        <div class="book thin" style="height: 135px;">1 Corinthians</div>
+                        <div class="book thin" style="height: 130px;">2 Corinthians</div>
+                        <div class="book thin" style="height: 125px;">Galatians</div>
+                        <div class="book thin" style="height: 115px;">Ephesians</div>
+                        <div class="book thin" style="height: 130px;">Philippians</div>
+                        <div class="book thin" style="height: 125px;">Colossians</div>
+                        <div class="book thin" style="height: 140px;">1 Thessalonians</div>
+                        <div class="book thin" style="height: 135px;">2 Thessalonians</div>
+                        <div class="book thin" style="height: 120px;">1 Timothy</div>
+                    </div>
+                    <div class="row-container">
+                        <div class="book thin" style="height: 120px;">2 Timothy</div>
+                        <div class="book thin" style="height: 115px;">Titus</div>
+                        <div class="book thin" style="height: 110px;">Philemon</div>
+                        <div class="book thin" style="height: 135px;">Hebrews</div>
+                        <div class="book thin" style="height: 125px;">James</div>
+                        <div class="book thin" style="height: 120px;">1 Peter</div>
+                        <div class="book thin" style="height: 115px;">2 Peter</div>
+                        <div class="book thin" style="height: 125px;">1 John</div>
+                        <div class="book thin" style="height: 110px;">2 John</div>
+                        <div class="book thin" style="height: 110px;">3 John</div>
+                        <div class="book thin" style="height: 115px;">Jude</div>
+                    </div>
+                </div>
+                <div class="description-text">
+                    Letters to individuals and churches<br>
+                    How to live as Christians
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Section (New Testament Pt 2) -->
+        <div class="books-layout">
+            <!-- History Book -->
+            <div class="books-column">
+                <div class="books-subtitle">HISTORY&mdash;ONE BOOK</div>
+                <div class="book-stack">
+                    <div class="book" style="height: 160px; width: 45px; font-size: 14px;">Acts</div>
+                </div>
+                <div class="description-text">
+                    First preaching of the gospel<br>
+                    History of church's first thirty years<br>
+                    Book of conversions
+                </div>
+            </div>
+
+            <!-- Prophecy (NT) Book -->
+            <div class="books-column">
+                <div class="books-subtitle">PROPHECY&mdash;ONE BOOK</div>
+                <div class="book-stack">
+                    <div class="book" style="height: 160px; width: 45px; font-size: 14px;">Revelation</div>
+                </div>
+                <div class="description-text">
+                    Message to persecuted Christians.<br>
+                    Be faithful even if you die for it.<br>
+                    In Christ you triumph!
+                </div>
+            </div>
+        </div>
+
+        <!-- Original File Reference -->
+        <div class="reference-image-container">
+            <p style="color: #666; font-style: italic; margin-bottom: 10px;">Reference Image Included Below:</p>
+            <img src="LesonOneSideTwo.jpg" alt="LesonOneSideTwo.jpg" style="max-width: 100%; border: 1px solid #ccc; box-shadow: 0 0 5px rgba(0,0,0,0.2);">
+        </div>
+        
+    </div>
+
+</body>
+</html>

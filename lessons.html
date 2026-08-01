@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Of The Bible - Lessons</title>
+    <link rel="stylesheet" type="text/css" href="GlobalStyle.css">
+    <link rel="stylesheet" type="text/css" href="./Styles/lessons.css">
+    <script src="./Scripts/LessonLogic.js"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="icon-placeholder">LC</div>
+        <h1>Learning Center</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="nav-link" id="nav-home">Home</a>
+        <a href="lessons.html" class="nav-link" id="nav-lessons">Lessons</a>
+        <a href="downloads.html" class="nav-link" id="nav-downloads">Downloads</a>
+    </nav>
+
+
+	<section id="lessons" class="page">
+        <div class="split-layout">
+            <!-- Left: PDF Worksheet -->
+            <div id="LeftColumn" class="left-column">
+                <iframe src="./LessonSheets/LessonOneSideOne.html"></iframe>
+            </div>
+            
+            <!-- Right: Transcript -->
+            <div id="RightColumn" class="right-column">
+                <h2>Lesson Transcript</h2>
+                <p style="margin-top: 1rem; line-height: 1.8;">
+                    <strong>[00:00] Instructor:</strong> Welcome to today's lesson. If you are following along, please look at the worksheet.<br><br>
+                    <strong>[00:15] Instructor:</strong> Today we are going to cover the fundamentals. You can read this text while listening to the audio player locked to the bottom of the page.<br><br>
+                    <em>(Transcript continues with placeholder text...)</em><br><br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    <br><br>
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    <strong>[00:00] Instructor:</strong> Welcome to today's lesson. If you are following along, please look at the worksheet.<br><br>
+                    <strong>[00:15] Instructor:</strong> Today we are going to cover the fundamentals. You can read this text while listening to the audio player locked to the bottom of the page.<br><br>
+                    <em>(Transcript continues with placeholder text...)</em><br><br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    <br><br>
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    <strong>[00:00] Instructor:</strong> Welcome to today's lesson. If you are following along, please look at the worksheet.<br><br>
+                    <strong>[00:15] Instructor:</strong> Today we are going to cover the fundamentals. You can read this text while listening to the audio player locked to the bottom of the page.<br><br>
+                    <em>(Transcript continues with placeholder text...)</em><br><br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    <br><br>
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    <strong>[00:00] Instructor:</strong> Welcome to today's lesson. If you are following along, please look at the worksheet.<br><br>
+                    <strong>[00:15] Instructor:</strong> Today we are going to cover the fundamentals. You can read this text while listening to the audio player locked to the bottom of the page.<br><br>
+                    <em>(Transcript continues with placeholder text...)</em><br><br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    <br><br>
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="widescreen" id="DesktopSwitcher">
+        <button id="WorkSheetSwitcher">Change Worksheet Side</button>
+        <button id="TranscriptSwitcher">Show/Hide Transcript</button>
+        <button id="TapeSide" onclick="SwitchSides()">Switch to Side: 2</button>
+    </div>
+
+    <div class="mobile" id="MobileSwitcher">
+        <button onclick="PressMobileButton()" id="WorkSheetSwitcher">Change Worksheet Side</button>
+        <button id="TapeSide" onclick="SwitchSides()">Switch to Side: 2</button>
+    </div>
+    <div class="audio-player-container" id="global-audio-player">
+        
+        <audio id="LessonPlayer" controls>
+            <source src="./Audio/Peter Merrick - The Imcomparable Book (Lesson One) side 1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+    </div>
+
+</body>
+</html>

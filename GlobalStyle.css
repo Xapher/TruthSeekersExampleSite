@@ -1,0 +1,129 @@
+ /* Base Styles */
+:root {
+    --primary: #2563eb;
+    --bg-color: #f8fafc;
+    --text-color: #1e293b;
+    --border-color: #e2e8f0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header & Icon */
+header {
+    text-align: center;
+    padding: 1.5rem 1rem 1rem;
+    background-color: white;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.icon-placeholder {
+    width: 56px;
+    height: 56px;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.5rem auto;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header h1 {
+    font-size: 1.25rem;
+    color: var(--text-color);
+}
+
+/* Navigation */
+nav {
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: background 0.2s;
+    text-align: center;
+}
+
+nav a:hover, nav a.active {
+    background-color: #eff6ff;
+    color: var(--primary);
+}
+
+
+
+.active{
+    visibility: visible;
+}
+
+
+.non-active{
+    display: none;
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+}
+
+
+button {
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2;
+}
+
+button:hover, .ActiveButton {
+    background-color: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+@media (min-width: 768px) {
+    .mobile {
+        visibility: hidden;
+    }
+
+    .widescreen {
+        visibility: visible;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .mobile {
+        visibility: visible;
+    }
+
+    .widescreen {
+        visibility: hidden;
+    }
+}

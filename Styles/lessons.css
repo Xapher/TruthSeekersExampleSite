@@ -1,0 +1,156 @@
+/* Audio Player Locked to Bottom */
+.audio-player-container {
+    min-height: 64px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border-top: 1px solid var(--border-color);
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+}
+
+
+
+#DesktopSwitcher {
+    min-height: 64px;
+    position: fixed;
+    bottom: 60px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border-top: 2px solid var(--border-color);
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+}
+
+#MobileSwitcher {
+    min-height: 64px;
+    position: fixed;
+    bottom: 60px;
+    left: 0;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+}
+
+
+#WorkSheetSwitcher {
+    float:left;
+}
+
+#TranscriptSwitcher {
+    float: right;
+}
+
+#lessons{
+    height: 60vh; /* Desktop height calculation */
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.split-layout {
+    display: flex;
+    gap: 1.5rem;
+    flex: 1;
+    justify-content: center;
+}
+
+.audio-player-container a {
+    height: 100%;
+}
+
+audio {
+    width: 100%;
+    max-width: 800px;
+    height: 40px; /* slightly compacter on mobile */
+}
+
+button{
+    font-weight: bold;
+}
+
+
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    min-height: 400px; /* Ensures iframe doesn't collapse */
+}
+
+
+
+
+@media (min-width: 768px) {
+    .left-column, .right-column {
+        flex: 1;
+        background: white;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .right-column {
+        padding: 1.5rem;
+        overflow-y: auto;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    /* Stack the lessons split screen */
+    .split-layout {
+        display: block;
+        height: auto; /* Remove strict desktop height */
+    }
+
+    #lessons{
+        margin: 0;
+    }
+
+    .left-column {
+        height: 50vh; /* Give PDF a distinct height on mobile */
+        min-height: 350px;
+        flex: none;
+        position: fixed;
+        width: 100vw;
+    }
+
+    .right-column {
+        min-height: 350px;
+        flex: none;
+        width: 90vw;
+        padding-bottom: 300px;
+    }
+
+    /* Stack the downloads layout */
+    .downloads-layout {
+        flex-direction: column;
+    }
+
+    .buttons-sidebar {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 2 buttons per row on mobile to save space */
+        gap: 0.5rem;
+    }
+
+    .preview-area {
+        min-height: 400px;
+        height: 50vh;
+    }
+}
