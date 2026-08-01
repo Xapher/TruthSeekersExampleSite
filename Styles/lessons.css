@@ -79,11 +79,23 @@ audio {
 
 
 iframe {
+    width: 100%;
     border: none;
     min-height: 400px; /* Ensures iframe doesn't collapse */
+}
+
+
+
+.left-column {
+        height: 100vh; /* Give PDF a distinct height on mobile */
+}
+
+iframe{
     height: 100%;
     scale: 0.5;
     transform-origin: 0 0;
+    flex: none;
+    width: 100vw;
     width: calc(200%); /* 200% */
 }
 
@@ -118,6 +130,10 @@ iframe {
         height: 100vh;
     }
 
+    #lessons
+    {
+        padding-bottom: 500px;
+    }
 }
 
 
@@ -132,12 +148,17 @@ iframe {
     #lessons{
         margin: 0;
         width: 100%;
+        padding-bottom: 0px;
     }
 
-    .right-column {
-        min-height: 350px;
-        flex: none;
-        width: 90vw;
+    .left-column, .right-column {
+        flex: 1;
+        background: white;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
     }
 
     /* Stack the downloads layout */
