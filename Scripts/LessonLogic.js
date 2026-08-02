@@ -24,7 +24,7 @@ window.onload = function() {
   	console.log("Page fully loaded");
 };
 
-
+var response;
 
 function InitializeLessons() {
 	//Load the URL ? = 1, 2, 3, 4, 5
@@ -40,11 +40,9 @@ function InitializeLessons() {
 	WorksheetSideTwo = document.getElementById('SideTwoContainer');
 
 
-	var response = await fetch("./Content/LessonSheets/LessonOneSideOne.html");
-	WorksheetSideOne.innerHTML = response.text()
+	
 
-  response = await fetch("./Content/LessonSheets/LessonOneSideTwo.html");
-  WorksheetSideTwo.innerHTML = response.text()
+  
 
 	if(isMobile()){
 		RightColumn.classList.add('non-active');
@@ -58,17 +56,15 @@ function InitializeLessons() {
 
 
 
-async function getText() {
-  // 1. Await the fetch response
-  const response = await fetch('https://example.com');
-  
-  // 2. Await the text conversion
-  const text = await response.text(); 
-  
-  console.log(text); // Outputs the actual string
+async function LoadSheetFront() {
+  response = await fetch("./Content/LessonSheets/LessonOneSideOne.html");
+	WorksheetSideOne.innerHTML = response.text()
 }
 
-
+async function LoadSheetBack() {
+	response = await fetch("./Content/LessonSheets/LessonOneSideTwo.html");
+  WorksheetSideTwo.innerHTML = response.text()
+}
 
 
 
