@@ -12,6 +12,10 @@ var LeftColumn;
 var RightColumn;
 var IframeSheet;
 
+
+var WorksheetSideOne;
+var WorksheetSideTwo;
+
 var LessonJSON;
 var LessonTranscript;
 
@@ -30,6 +34,21 @@ function InitializeLessons() {
 	RightColumn = document.getElementById('RightColumn');
 	IframeSheet = document.getElementById('SheetContainer');
 	LessonTranscript = document.getElementById('LessonTranscript');
+
+
+	WorksheetSideOne = document.getElementById('SideOneContainer');
+	WorksheetSideTwo = document.getElementById('SideTwoContainer');
+
+
+	fetch("./Content/LessonSheets/LessonOneSideOne.html")
+  .then(response => WorksheetSideOne.innerHTML = response)
+  .catch(error => console.error('Error:', error));
+
+  fetch("./Content/LessonSheets/LessonOneSideTwo.html")
+  .then(response => WorksheetSideTwo.innerHTML = response)
+  .catch(error => console.error('Error:', error));
+
+
 	if(isMobile()){
 		RightColumn.classList.add('non-active');
 		LeftColumn.classList.add('active');
@@ -72,7 +91,10 @@ function ChangeSheetSide() {
 
 
 
-
+function LoadSheet(){
+	//fetch the html
+	//
+}
 
 
 
