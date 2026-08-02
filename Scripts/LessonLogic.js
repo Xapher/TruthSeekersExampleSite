@@ -2,6 +2,7 @@ var SelectedTape = "The Imcomparable Book (Lesson One) side _Side_.mp3";
 var BaseDir = "./Content/Audio/";
 var FileBase = "Peter Merrick - ";
 var TapeSide = 1;
+var SelectedLesson = 1;
 
 var Lessons =["", "A Relationship Broken (Lesson 2) side _Side_.mp3"];
 
@@ -26,8 +27,10 @@ window.onload = function() {
 
 var response;
 
+
 function InitializeLessons() {
 	//Load the URL ? = 1, 2, 3, 4, 5
+
 	LessonAudio = document.getElementById('LessonPlayer');
 	FlipButton = document.getElementById('TapeSide');
 	LeftColumn = document.getElementById('LeftColumn');
@@ -57,12 +60,12 @@ function InitializeLessons() {
 
 
 async function LoadSheetFront() {
-  response = await fetch("./Content/LessonSheets/LessonOneSideOne.html");
+  response = await fetch("./Content/LessonSheets/" + SelectedLesson + "/front.html");
 	WorksheetSideOne.innerHTML = await response.text()
 }
 
 async function LoadSheetBack() {
-	response = await fetch("./Content/LessonSheets/LessonOneSideTwo.html");
+	response = await fetch("./Content/LessonSheets/" + SelectedLesson + "/back.html");
   WorksheetSideTwo.innerHTML = await response.text()
 }
 

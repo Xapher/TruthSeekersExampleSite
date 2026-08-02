@@ -4,210 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book of Books</title>
-    <style>
-        body {
-            font-family: "Times New Roman", Times, serif;
-            margin: 0;
-            padding: 0;
-            background-color: #d3d3d3;
-        }
-
-        /* --- Top Section --- */
-        .top-section {
-            background-color: #1a1a1a;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .main-title {
-            color: #ffffff;
-            font-size: 42px;
-            margin: 0 0 30px 0;
-            letter-spacing: 2px;
-            font-weight: normal;
-        }
-
-        .chart-board {
-            background-color: #e5e5e5;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 30px;
-            position: relative;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-        }
-
-        /* The Cross */
-        .cross {
-            position: absolute;
-            top: 20px;
-            bottom: 20px;
-            left: 50%;
-            width: 14px;
-            background-color: #222;
-            transform: translateX(-50%);
-            z-index: 1;
-        }
-        .cross::before {
-            content: "";
-            position: absolute;
-            top: 55px;
-            left: -120px;
-            right: -120px;
-            height: 14px;
-            background-color: #222;
-        }
-
-        /* Chart Headers */
-        .chart-headers {
-            display: flex;
-            justify-content: space-between;
-            position: relative;
-            z-index: 2;
-            margin-bottom: 40px;
-            padding: 0 20px;
-        }
-        
-        .header-col { text-align: left; }
-        .header-col.right { text-align: right; }
-
-        .testament-title {
-            font-size: 20px;
-            border-bottom: 1px solid #000;
-            display: inline-block;
-            padding-bottom: 2px;
-            margin-bottom: 5px;
-        }
-
-        /* Grid for Book Categories */
-        .categories-container {
-            display: flex;
-            justify-content: space-between;
-            position: relative;
-            z-index: 2;
-            gap: 60px;
-        }
-
-        .category-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            flex: 1;
-        }
-
-        .box {
-            border: 1px solid #333;
-            padding: 15px 10px;
-            text-align: center;
-            font-size: 14px;
-            background: transparent;
-        }
-
-        .box-title {
-            border-bottom: 1px solid #000;
-            display: inline-block;
-            padding-bottom: 2px;
-            margin-bottom: 15px;
-            font-weight: bold;
-        }
-
-        .arrow { margin: 8px 0; font-size: 18px; }
-
-        .prophecy-group {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            font-size: 13px;
-        }
-        .prophecy-divider {
-            border-top: 1px dashed #666;
-            margin: 10px 0;
-        }
-
-        /* --- Bottom Section --- */
-        .bottom-section {
-            background-color: #ffffff;
-            max-width: 940px;
-            margin: 0 auto;
-            padding: 40px;
-        }
-
-        .divider-line {
-            border: none;
-            border-top: 3px solid #000;
-            border-bottom: 1px solid #000;
-            height: 2px;
-            margin-bottom: 30px;
-        }
-
-        .bottom-title {
-            font-size: 32px;
-            margin-bottom: 40px;
-            font-weight: normal;
-        }
-
-        .books-layout {
-            display: flex;
-            justify-content: space-between;
-            gap: 40px;
-        }
-
-        .books-column { flex: 1; }
-        .books-subtitle {
-            font-size: 20px;
-            margin-bottom: 30px;
-        }
-
-        /* Simulated Books CSS */
-        .book-stack {
-            display: flex;
-            align-items: flex-end;
-            margin-bottom: 20px;
-            min-height: 200px;
-        }
-        
-        .book-stack.history {
-            flex-wrap: wrap; 
-            align-content: flex-end;
-        }
-
-        .book {
-            background-color: #1a1a1a;
-            color: #ccc;
-            width: 35px;
-            height: 160px;
-            margin-right: 4px;
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-            text-align: center;
-            padding: 15px 0;
-            font-size: 11px;
-            letter-spacing: 1px;
-            border-left: 2px solid #555;
-            border-top: 2px solid #555;
-            box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            text-transform: uppercase;
-        }
-
-        .description-text {
-            color: #555;
-            font-size: 16px;
-            line-height: 1.5;
-        }
-
-        /* Reference Image Block */
-        .reference-image-container {
-            margin-top: 60px;
-            text-align: center;
-            padding: 20px;
-            background: #eee;
-            border-top: 1px solid #ccc;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
-    <!-- Top Section (Black Background Chart) -->
+    <!-- Top Section -->
     <div class="top-section">
         <h1 class="main-title">BOOK OF BOOKS</h1>
         
@@ -287,7 +88,7 @@
         </div>
     </div>
 
-    <!-- Bottom Section (White Background Book Illustrations) -->
+    <!-- Bottom Section -->
     <div class="bottom-section">
         <hr class="divider-line">
         
@@ -315,15 +116,15 @@
             <div class="books-column">
                 <div class="books-subtitle">HISTORY&mdash;TWELVE BOOKS</div>
                 <div class="book-stack history">
-                    <!-- Simulating the top/bottom stack effect -->
-                    <div style="display:flex; margin-bottom: 5px;">
+                    <!-- Adjusted markup wrapper styling dynamically -->
+                    <div>
                         <div class="book" style="height: 130px;">Joshua</div>
                         <div class="book" style="height: 120px;">Judges</div>
                         <div class="book" style="height: 110px;">Ruth</div>
                         <div class="book" style="height: 130px;">1 Samuel</div>
                         <div class="book" style="height: 130px;">2 Samuel</div>
                     </div>
-                    <div style="display:flex;">
+                    <div>
                         <div class="book" style="height: 130px;">1 Kings</div>
                         <div class="book" style="height: 130px;">2 Kings</div>
                         <div class="book" style="height: 140px;">1 Chronicles</div>

@@ -1,0 +1,246 @@
+/* Universal Box Sizing */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Times New Roman", Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d3d3d3;
+        }
+
+        /* --- Top Section --- */
+        .top-section {
+            background-color: #1a1a1a;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .main-title {
+            color: #ffffff;
+            font-size: clamp(28px, 5vw, 42px);
+            margin: 0 0 30px 0;
+            letter-spacing: 2px;
+            font-weight: normal;
+        }
+
+        .chart-board {
+            background-color: #e5e5e5;
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            border-radius: 4px;
+        }
+
+        /* The Cross */
+        .cross {
+            position: absolute;
+            top: 20px;
+            bottom: 20px;
+            left: 50%;
+            width: 14px;
+            background-color: #222;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+        
+        .cross::before {
+            content: "";
+            position: absolute;
+            top: 55px;
+            left: -800%; /* Relative instead of fixed negative pixels */
+            width: 1700%; 
+            height: 14px;
+            background-color: #222;
+        }
+
+        /* Chart Headers */
+        .chart-headers {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            z-index: 2;
+            margin-bottom: 40px;
+            padding: 0 5%;
+        }
+
+        .header-col { text-align: left; }
+        .header-col.right { text-align: right; }
+
+        .testament-title {
+            font-size: clamp(16px, 3vw, 20px);
+            border-bottom: 1px solid #000;
+            display: inline-block;
+            padding-bottom: 2px;
+            margin-bottom: 5px;
+        }
+
+        /* Grid for Book Categories */
+        .categories-container {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            z-index: 2;
+            gap: 40px;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            flex: 1;
+        }
+
+        .box {
+            border: 1px solid #333;
+            padding: 15px 10px;
+            text-align: center;
+            font-size: clamp(12px, 2vw, 14px);
+            background: transparent;
+            background-color: #e5e5e5; /* ensure opacity over the cross */
+        }
+
+        .box-title {
+            border-bottom: 1px solid #000;
+            display: inline-block;
+            padding-bottom: 2px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .arrow { margin: 8px 0; font-size: 18px; }
+
+        .prophecy-group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            font-size: 13px;
+        }
+        .prophecy-divider {
+            border-top: 1px dashed #666;
+            margin: 10px 0;
+        }
+
+        /* --- Bottom Section --- */
+        .bottom-section {
+            background-color: #ffffff;
+            max-width: 940px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            width: 100%;
+        }
+
+        .divider-line {
+            border: none;
+            border-top: 3px solid #000;
+            border-bottom: 1px solid #000;
+            height: 2px;
+            margin-bottom: 30px;
+        }
+
+        .bottom-title {
+            font-size: clamp(24px, 4vw, 32px);
+            margin-bottom: 40px;
+            font-weight: normal;
+            text-align: center;
+        }
+
+        .books-layout {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .books-column { flex: 1; min-width: 300px; }
+        
+        .books-subtitle {
+            font-size: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* Simulated Books CSS */
+        .book-stack {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            margin-bottom: 20px;
+            min-height: 200px;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .book-stack.history {
+            flex-wrap: wrap; 
+            align-content: flex-end;
+        }
+
+        .book-stack.history > div {
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 4px;
+            margin-bottom: 5px;
+        }
+
+        .book {
+            background-color: #1a1a1a;
+            color: #ccc;
+            width: 35px;
+            height: 160px;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 11px;
+            letter-spacing: 1px;
+            border-left: 2px solid #555;
+            border-top: 2px solid #555;
+            box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-transform: uppercase;
+            flex-shrink: 0;
+        }
+
+        .description-text {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        /* --- Media Queries for Responsiveness --- */
+        @media (max-width: 768px) {
+            .cross {
+                display: none; /* Hide the cross graphic on stacked mobile view */
+            }
+
+            .chart-headers {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .header-col, .header-col.right {
+                text-align: center;
+            }
+
+            .categories-container {
+                flex-direction: column;
+            }
+
+            .books-layout {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .category-grid {
+                grid-template-columns: 1fr; /* Stack category boxes completely on very small screens */
+            }
+        }
