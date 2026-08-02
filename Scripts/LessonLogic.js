@@ -40,14 +40,11 @@ function InitializeLessons() {
 	WorksheetSideTwo = document.getElementById('SideTwoContainer');
 
 
-	fetch("./Content/LessonSheets/LessonOneSideOne.html")
-  .then(response => WorksheetSideOne.innerHTML = response.text())
-  .catch(error => console.error('Error:', error));
+	var response = await fetch("./Content/LessonSheets/LessonOneSideOne.html");
+	WorksheetSideOne.innerHTML = response.text()
 
-  fetch("./Content/LessonSheets/LessonOneSideTwo.html")
-  .then(response => WorksheetSideTwo.innerHTML = response.text())
-  .catch(error => console.error('Error:', error));
-
+  response = await fetch("./Content/LessonSheets/LessonOneSideTwo.html");
+  WorksheetSideTwo.innerHTML = response.text()
 
 	if(isMobile()){
 		RightColumn.classList.add('non-active');
@@ -58,6 +55,23 @@ function InitializeLessons() {
 	LoadTapeAndSide();
 	
 }
+
+
+
+async function getText() {
+  // 1. Await the fetch response
+  const response = await fetch('https://example.com');
+  
+  // 2. Await the text conversion
+  const text = await response.text(); 
+  
+  console.log(text); // Outputs the actual string
+}
+
+
+
+
+
 
 function SwitchSides(){
 	if (TapeSide == 1) {
