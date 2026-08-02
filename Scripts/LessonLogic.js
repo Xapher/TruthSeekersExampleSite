@@ -43,7 +43,9 @@ function InitializeLessons() {
 	WorksheetSideTwo = document.getElementById('SideTwoContainer');
 
 
-	
+	LoadSheetFront();
+	LoadSheetBack();
+	ShowFront();	
 
   
 
@@ -68,6 +70,28 @@ async function LoadSheetBack() {
 	response = await fetch("./Content/LessonSheets/" + SelectedLesson + "/back.html");
   WorksheetSideTwo.innerHTML = await response.text()
 }
+
+
+function ShowFront(){
+	WorksheetSideOne.classList.remove('non-active');
+	HideBack();
+}
+
+function ShowBack(){
+	WorksheetSideTwo.classList.remove('non-active');
+	HideFront();
+}
+
+
+function HideFront() {
+	WorksheetSideOne.classList.add('non-active');
+}
+
+function HideBack(){
+	WorksheetSideTwo.classList.add('non-active');
+}
+
+
 
 
 
