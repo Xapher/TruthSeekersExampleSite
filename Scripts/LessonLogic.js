@@ -41,11 +41,11 @@ function InitializeLessons() {
 
 
 	fetch("./Content/LessonSheets/LessonOneSideOne.html")
-  .then(response => WorksheetSideOne.innerHTML = response)
+  .then(response => WorksheetSideOne.innerHTML = response.text())
   .catch(error => console.error('Error:', error));
 
   fetch("./Content/LessonSheets/LessonOneSideTwo.html")
-  .then(response => WorksheetSideTwo.innerHTML = response)
+  .then(response => WorksheetSideTwo.innerHTML = response.text())
   .catch(error => console.error('Error:', error));
 
 
