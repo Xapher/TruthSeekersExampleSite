@@ -107,7 +107,9 @@ iframe{
     scale: 0.8;
 }
 
-
+.left-column, .right-column {
+        overflow-y: scroll;
+    }
 
 
 @media (min-width: 768px) {
@@ -116,7 +118,7 @@ iframe{
         background: white;
         border: 1px solid var(--border-color);
         border-radius: 8px;
-        overflow-y: scroll;
+        
         display: flex;
         flex-direction: column;
     }
