@@ -41,7 +41,7 @@ function InitializeLessons() {
 	WorksheetSideOne = document.getElementById('SideOneContainer');
 	WorksheetSideTwo = document.getElementById('SideTwoContainer');
 
-
+	LoadLesson();
 	LoadSheetFront();
 	LoadSheetBack();
 	ShowFront();	
@@ -53,7 +53,7 @@ function InitializeLessons() {
 		LeftColumn.classList.add('active');
 		InitializeMobile();
 	}
-	LoadLesson();
+	
 	LoadTapeAndSide();
 	
 }
