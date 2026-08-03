@@ -205,7 +205,7 @@ function isMobile() {
 
 
 
-await function LoadLesson() {
+async function LoadLesson() {
 	LessonTranscript.innerHTML = "";
 	response = await fetch('./Content/JSONData/LessonOne.json');
 
@@ -215,5 +215,4 @@ await function LoadLesson() {
   for (var i = 0; i < LessonJSON["TextTranscript"].length; i++) {
   	LessonTranscript.innerHTML += "<p class=\"TranscriptText\">" + LessonJSON["TextTranscript"][i] + "</p>";
   }
-  
 }
