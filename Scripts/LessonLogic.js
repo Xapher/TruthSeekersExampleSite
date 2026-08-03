@@ -42,8 +42,7 @@ function InitializeLessons() {
 	WorksheetSideTwo = document.getElementById('SideTwoContainer');
 
 	LoadLesson();
-	LoadSheetFront();
-	LoadSheetBack();
+	
 	ShowFront();	
 
   
@@ -215,4 +214,7 @@ async function LoadLesson() {
   for (var i = 0; i < LessonJSON["TextTranscript"].length; i++) {
   	LessonTranscript.innerHTML += "<p class=\"TranscriptText\">" + LessonJSON["TextTranscript"][i] + "</p>";
   }
+
+  LoadSheetFront();
+	LoadSheetBack();
 }
