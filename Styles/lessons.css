@@ -58,6 +58,10 @@
     margin-right: auto;
 }
 
+#LessonTranscript{
+    padding: 15px;
+}
+
 .split-layout {
     display: flex;
     gap: 1.5rem;

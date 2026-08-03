@@ -35,7 +35,6 @@ function InitializeLessons() {
 	FlipButton = document.getElementById('TapeSide');
 	LeftColumn = document.getElementById('LeftColumn');
 	RightColumn = document.getElementById('RightColumn');
-	IframeSheet = document.getElementById('SheetContainer');
 	LessonTranscript = document.getElementById('LessonTranscript');
 
 
@@ -62,12 +61,12 @@ function InitializeLessons() {
 
 
 async function LoadSheetFront() {
-  response = await fetch("./Content/LessonSheets/" + SelectedLesson + "/front.html");
+  response = await fetch(LessonJSON["FileContents"]["SheetFront"]);
 	WorksheetSideOne.innerHTML = await response.text()
 }
 
 async function LoadSheetBack() {
-	response = await fetch("./Content/LessonSheets/" + SelectedLesson + "/back.html");
+	response = await fetch(LessonJSON["FileContents"]["SheetBack"]);
   WorksheetSideTwo.innerHTML = await response.text()
 }
 
@@ -117,11 +116,11 @@ function LoadTapeAndSide(){
 var worksheet = 1;
 function ChangeSheetSide() {
 	if(worksheet == 1){
-		IframeSheet.src = "./Content/LessonSheets/LessonOneSideTwo.html";
+		//IframeSheet.src = "./Content/LessonSheets/LessonOneSideTwo.html";
 		worksheet = 2;
 	}
 	else {
-		IframeSheet.src = "./Content/LessonSheets/LessonOneSideOne.html";
+		//IframeSheet.src = "./Content/LessonSheets/LessonOneSideOne.html";
 		worksheet = 1;
 	}
 }
@@ -165,14 +164,14 @@ function InitializeMobile(){
 
 	RightColumn.classList.add('non-active');
 	LeftColumn.classList.add('active');
-	IframeSheet.src = "./Content/LessonSheets/LessonOneSideOne.html";
+	//IframeSheet.src = "./Content/LessonSheets/LessonOneSideOne.html";
 	//LeftColumn = first page
 }
 
 function ChangeMobileSheetSide(){
 	MobileFunction = ShowMobileTranscript;
 	//LeftColumn = second page
-	IframeSheet.src = "./Content/LessonSheets/LessonOneSideTwo.html";
+	//IframeSheet.src = "./Content/LessonSheets/LessonOneSideTwo.html";
 }
 
 function ShowMobileTranscript(){
@@ -206,20 +205,15 @@ function isMobile() {
 
 
 
-function LoadLesson() {
+await function LoadLesson() {
 	LessonTranscript.innerHTML = "";
-	fetch('./Content/JSONData/LessonOne.json')
-  .then(response => response.json())
-  .then(data => {
-  	LessonJSON = data;
-  	SelectedTape = LessonJSON["FileContents"]["FilePath"];
+	response = await fetch('./Content/JSONData/LessonOne.json');
+
+	LessonJSON = response.json();
+	SelectedTape = LessonJSON["FileContents"]["FilePath"];
   
-	  for (var i = 0; i < LessonJSON["TextTranscript"].length; i++) {
-	  	LessonTranscript.innerHTML += "<p class=\"TranscriptText\">" + LessonJSON["TextTranscript"][i] + "</p>";
-	  }
-  })
-  .catch(error => console.error('Error:', error));
-
-
+  for (var i = 0; i < LessonJSON["TextTranscript"].length; i++) {
+  	LessonTranscript.innerHTML += "<p class=\"TranscriptText\">" + LessonJSON["TextTranscript"][i] + "</p>";
+  }
   
 }
