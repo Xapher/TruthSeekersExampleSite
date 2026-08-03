@@ -209,7 +209,7 @@ async function LoadLesson() {
 	LessonTranscript.innerHTML = "";
 	response = await fetch('./Content/JSONData/LessonOne.json');
 
-	LessonJSON = response.json();
+	LessonJSON = await response.json();
 	SelectedTape = LessonJSON["FileContents"]["FilePath"];
   
   for (var i = 0; i < LessonJSON["TextTranscript"].length; i++) {
