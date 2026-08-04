@@ -27,6 +27,8 @@ window.onload = function() {
 
 var response;
 
+var TimeBegin = 0;
+var TimeEnd = 5;
 
 function InitializeLessons() {
 	//Load the URL ? = 1, 2, 3, 4, 5
@@ -55,6 +57,18 @@ function InitializeLessons() {
 	
 	LoadTapeAndSide();
 	
+
+
+	LessonAudio.addEventListener('timeupdate', () => {
+	  // Execute code continuously while playing
+	  console.log(`Current time: ${LessonAudio.currentTime}`);
+	  //Eh, get some of the <p> ids and compare it to time for active boxes
+	  for (const child of LessonTranscript.childNodes) {
+		  child.classList.remove('ActiveTranscript');
+		  
+		}
+	});
+
 }
 
 
@@ -212,7 +226,7 @@ async function LoadLesson() {
 	SelectedTape = LessonJSON["FileContents"]["FilePath"];
   
   for (var i = 0; i < LessonJSON["TextTranscript"].length; i++) {
-  	LessonTranscript.innerHTML += "<p class=\"TranscriptText\">" + LessonJSON["TextTranscript"][i] + "</p>";
+  	LessonTranscript.innerHTML += `<p id=${LessonJSON["TextTranscript"][i][0]} class=\"TranscriptText\">` + LessonJSON["TextTranscript"][i][1] + "</p>";
   }
 
   LoadSheetFront();
