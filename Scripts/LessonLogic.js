@@ -142,13 +142,11 @@ function LoadTapeAndSide(){
 var worksheet = 1;
 function ChangeSheetSide() {
 	if(worksheet == 1){
-		WorksheetSideTwo.classList.remove('non-active ');
-		WorksheetSideOne.classList.add('non-active');
+		ShowBack();
 		worksheet = 2;
 	}
 	else {
-		WorksheetSideTwo.classList.add('non-active ');
-		WorksheetSideOne.classList.remove('non-active');
+		ShowFront();
 		worksheet = 1;
 	}
 }
