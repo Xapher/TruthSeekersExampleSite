@@ -111,9 +111,13 @@ iframe{
     scale: 0.8;
 }
 
-    .left-column, .right-column {
-        overflow-y: scroll;
-    }
+.left-column, .right-column {
+    overflow-y: scroll;
+}
+
+.ActiveTranscript{
+    background-color: blue;
+}
 
 
 @media (min-width: 768px) {

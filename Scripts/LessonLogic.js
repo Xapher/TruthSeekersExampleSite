@@ -65,7 +65,12 @@ function InitializeLessons() {
 	  //Eh, get some of the <p> ids and compare it to time for active boxes
 	  for (const child of LessonTranscript.childNodes) {
 		  child.classList.remove('ActiveTranscript');
-		  
+		  TimeBegin = parseFloat(child.id.split('-')[0]);
+		  TimeEnd = parseFloat(child.id.split('-')[0]);
+		  if(LessonAudio.currentTime >= TimeBegin && LessonAudio.currentTime < TimeEnd){
+		  	child.classList.add('ActiveTranscript');
+		  	break;
+		  }
 		}
 	});
 
