@@ -41,7 +41,7 @@ function InitializeLessons() {
 	LeftColumn = document.getElementById('LeftColumn');
 	RightColumn = document.getElementById('RightColumn');
 	LessonTranscript = document.getElementById('LessonTranscript');
-	DynamicMobileButton = document.getElementById('WorkSheetSwitcher');
+	DynamicMobileButton = document.getElementById('MobileWorkSheetSwitcher');
 
 	WorksheetSideOne = document.getElementById('SideOneContainer');
 	WorksheetSideTwo = document.getElementById('SideTwoContainer');
@@ -182,23 +182,19 @@ function InitializeMobile(){
 	RightColumn.classList.remove('active');
 	RightColumn.classList.add('non-active');
 	DynamicMobileButton.textContent = "Switch to: Back";
-	//IframeSheet.src = "./Content/LessonSheets/LessonOneSideOne.html";
-	//LeftColumn = first page
 }
 
 function ChangeMobileSheetSide(){
 	ShowBack();
 	MobileFunction = ShowMobileTranscript;
 	DynamicMobileButton.textContent = "Switch to: Transcript";
-	//LeftColumn = second page
-	//IframeSheet.src = "./Content/LessonSheets/LessonOneSideTwo.html";
 }
 
 function ShowMobileTranscript(){
 	MobileFunction = InitializeMobile;
-	//Show Transcript
 	HideFront();
 	HideBack();
+	RightColumn.classList.remove('non-active');
 	RightColumn.classList.add('active');
 	DynamicMobileButton.textContent = "Switch to: Front";
 }
