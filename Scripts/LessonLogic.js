@@ -181,6 +181,9 @@ function InitializeMobile(){
 	ShowFront();
 	RightColumn.classList.remove('active');
 	RightColumn.classList.add('non-active');
+
+	LeftColumn.classList.remove('non-active');
+	LeftColumn.classList.add('active');
 	DynamicMobileButton.textContent = "Switch to: Back";
 }
 
@@ -196,6 +199,8 @@ function ShowMobileTranscript(){
 	HideBack();
 	RightColumn.classList.remove('non-active');
 	RightColumn.classList.add('active');
+	LeftColumn.classList.add('non-active');
+	LeftColumn.classList.remove('active');
 	DynamicMobileButton.textContent = "Switch to: Front";
 }
 
