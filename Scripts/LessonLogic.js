@@ -178,17 +178,16 @@ function PressMobileButton(argument) {
 
 function InitializeMobile(){
 	MobileFunction = ChangeMobileSheetSide;
-	LeftColumn.classList.remove('non-active');
+	ShowFront();
 	RightColumn.classList.remove('active');
-
 	RightColumn.classList.add('non-active');
-	LeftColumn.classList.add('active');
 	DynamicMobileButton.textContent = "Switch to: Back";
 	//IframeSheet.src = "./Content/LessonSheets/LessonOneSideOne.html";
 	//LeftColumn = first page
 }
 
 function ChangeMobileSheetSide(){
+	ShowBack();
 	MobileFunction = ShowMobileTranscript;
 	DynamicMobileButton.textContent = "Switch to: Transcript";
 	//LeftColumn = second page
@@ -198,10 +197,8 @@ function ChangeMobileSheetSide(){
 function ShowMobileTranscript(){
 	MobileFunction = InitializeMobile;
 	//Show Transcript
-	RightColumn.classList.remove('non-active');
-	LeftColumn.classList.remove('active');
-
-	LeftColumn.classList.add('non-active');
+	HideFront();
+	HideBack();
 	RightColumn.classList.add('active');
 	DynamicMobileButton.textContent = "Switch to: Front";
 }
