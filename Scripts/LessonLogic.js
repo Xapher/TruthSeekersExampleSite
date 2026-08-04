@@ -30,6 +30,9 @@ var response;
 var TimeBegin = 0;
 var TimeEnd = 5;
 
+var DynamicMobileButton;
+var TempID = "";
+
 function InitializeLessons() {
 	//Load the URL ? = 1, 2, 3, 4, 5
 
@@ -38,7 +41,7 @@ function InitializeLessons() {
 	LeftColumn = document.getElementById('LeftColumn');
 	RightColumn = document.getElementById('RightColumn');
 	LessonTranscript = document.getElementById('LessonTranscript');
-
+	DynamicMobileButton = document.getElementById('WorkSheetSwitcher');
 
 	WorksheetSideOne = document.getElementById('SideOneContainer');
 	WorksheetSideTwo = document.getElementById('SideTwoContainer');
@@ -64,13 +67,18 @@ function InitializeLessons() {
 	  console.log(`Current time: ${LessonAudio.currentTime}`);
 	  //Eh, get some of the <p> ids and compare it to time for active boxes
 	  for (var i = 0; i < LessonTranscript.childNodes.length; i++) {
+	  	TempID = LessonTranscript.childNodes[i].id;
 	  	LessonTranscript.childNodes[i].classList.remove('ActiveTranscript');
-		  TimeBegin = parseFloat(LessonTranscript.childNodes[i].id.split('-')[0]);
-		  TimeEnd = parseFloat(LessonTranscript.childNodes[i].id.split('-')[1]);
-		  console.log(`Is: ${LessonAudio.currentTime} between: ${TimeBegin}-${TimeEnd}`);
-		  if(LessonAudio.currentTime >= TimeBegin && LessonAudio.currentTime < TimeEnd){
-		  	LessonTranscript.childNodes[i].classList.add('ActiveTranscript');
-		  }
+	  	if(parseInt(TempID.split(':')[0]) == TapeSide){
+	  		TempID = TempID.split(':')[1];
+	  		TimeBegin = parseFloat(TempID.split('-')[0]);
+			  TimeEnd = parseFloat(TempID.split('-')[1]);
+			  console.log(`Is: ${LessonAudio.currentTime} between: ${TimeBegin}-${TimeEnd}`);
+			  if(LessonAudio.currentTime >= TimeBegin && LessonAudio.currentTime < TimeEnd){
+			  	LessonTranscript.childNodes[i].classList.add('ActiveTranscript');
+			  }
+	  	}
+		  
 	  }
 	});
 
@@ -182,12 +190,14 @@ function InitializeMobile(){
 
 	RightColumn.classList.add('non-active');
 	LeftColumn.classList.add('active');
+	DynamicMobileButton.innerHTML = "Switch to: Back";
 	//IframeSheet.src = "./Content/LessonSheets/LessonOneSideOne.html";
 	//LeftColumn = first page
 }
 
 function ChangeMobileSheetSide(){
 	MobileFunction = ShowMobileTranscript;
+	DynamicMobileButton.innerHTML = "Switch to: Transcript";
 	//LeftColumn = second page
 	//IframeSheet.src = "./Content/LessonSheets/LessonOneSideTwo.html";
 }
@@ -200,6 +210,7 @@ function ShowMobileTranscript(){
 
 	LeftColumn.classList.add('non-active');
 	RightColumn.classList.add('active');
+	DynamicMobileButton.innerHTML = "Switch to: Front";
 }
 
 
