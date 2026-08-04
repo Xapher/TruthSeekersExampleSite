@@ -63,16 +63,16 @@ function InitializeLessons() {
 	  // Execute code continuously while playing
 	  console.log(`Current time: ${LessonAudio.currentTime}`);
 	  //Eh, get some of the <p> ids and compare it to time for active boxes
-	  for (const child of LessonTranscript.childNodes) {
-		  child.classList.remove('ActiveTranscript');
-		  TimeBegin = parseFloat(child.id.split('-')[0]);
-		  TimeEnd = parseFloat(child.id.split('-')[0]);
+	  for (var i = 0; i < LessonTranscript.childNodes.length; i++) {
+	  	 LessonTranscript.childNodes[i].classList.remove('ActiveTranscript');
+		  TimeBegin = parseFloat(LessonTranscript.childNodes[i].id.split('-')[0]);
+		  TimeEnd = parseFloat(LessonTranscript.childNodes[i].id.split('-')[0]);
 		  console.log(`Is: ${LessonAudio.currentTime} between: ${TimeBegin}-${TimeEnd}`);
 		  if(LessonAudio.currentTime >= TimeBegin && LessonAudio.currentTime < TimeEnd){
-		  	child.classList.add('ActiveTranscript');
+		  	LessonTranscript.childNodes[i].classList.add('ActiveTranscript');
 		  	break;
 		  }
-		}
+	  }
 	});
 
 }
