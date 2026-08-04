@@ -70,7 +70,6 @@ function InitializeLessons() {
 		  console.log(`Is: ${LessonAudio.currentTime} between: ${TimeBegin}-${TimeEnd}`);
 		  if(LessonAudio.currentTime >= TimeBegin && LessonAudio.currentTime < TimeEnd){
 		  	LessonTranscript.childNodes[i].classList.add('ActiveTranscript');
-		  	break;
 		  }
 	  }
 	});
