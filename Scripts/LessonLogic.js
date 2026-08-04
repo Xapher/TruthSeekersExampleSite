@@ -142,20 +142,15 @@ function LoadTapeAndSide(){
 var worksheet = 1;
 function ChangeSheetSide() {
 	if(worksheet == 1){
-		//IframeSheet.src = "./Content/LessonSheets/LessonOneSideTwo.html";
+		WorksheetSideTwo.classList.remove('non-active ');
+		WorksheetSideOne.classList.add('non-active');
 		worksheet = 2;
 	}
 	else {
-		//IframeSheet.src = "./Content/LessonSheets/LessonOneSideOne.html";
+		WorksheetSideTwo.classList.add('non-active ');
+		WorksheetSideOne.classList.remove('non-active');
 		worksheet = 1;
 	}
-}
-
-
-
-function LoadSheet(){
-	//fetch the html
-	//
 }
 
 
@@ -190,14 +185,14 @@ function InitializeMobile(){
 
 	RightColumn.classList.add('non-active');
 	LeftColumn.classList.add('active');
-	DynamicMobileButton.innerHTML = "Switch to: Back";
+	DynamicMobileButton.textContent = "Switch to: Back";
 	//IframeSheet.src = "./Content/LessonSheets/LessonOneSideOne.html";
 	//LeftColumn = first page
 }
 
 function ChangeMobileSheetSide(){
 	MobileFunction = ShowMobileTranscript;
-	DynamicMobileButton.innerHTML = "Switch to: Transcript";
+	DynamicMobileButton.textContent = "Switch to: Transcript";
 	//LeftColumn = second page
 	//IframeSheet.src = "./Content/LessonSheets/LessonOneSideTwo.html";
 }
@@ -210,7 +205,7 @@ function ShowMobileTranscript(){
 
 	LeftColumn.classList.add('non-active');
 	RightColumn.classList.add('active');
-	DynamicMobileButton.innerHTML = "Switch to: Front";
+	DynamicMobileButton.textContent = "Switch to: Front";
 }
 
 
