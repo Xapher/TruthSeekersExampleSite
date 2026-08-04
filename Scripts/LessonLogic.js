@@ -67,6 +67,7 @@ function InitializeLessons() {
 		  child.classList.remove('ActiveTranscript');
 		  TimeBegin = parseFloat(child.id.split('-')[0]);
 		  TimeEnd = parseFloat(child.id.split('-')[0]);
+		  console.log(`Is: ${LessonAudio.currentTime} between: ${TimeBegin}-${TimeEnd}`);
 		  if(LessonAudio.currentTime >= TimeBegin && LessonAudio.currentTime < TimeEnd){
 		  	child.classList.add('ActiveTranscript');
 		  	break;
