@@ -233,7 +233,7 @@ function isMobile() {
 
 async function LoadLesson() {
 	LessonTranscript.innerHTML = "";
-	response = await fetch('./Content/JSONData/" + SelectedLesson + ".json');
+	response = await fetch('./Content/JSONData/' + SelectedLesson + '.json');
 
 	LessonJSON = await response.json();
 	SelectedTape = LessonJSON["FileContents"]["FilePath"];
