@@ -55,6 +55,7 @@ nav {
     justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
+    width:  100vw;
     border-bottom: 1px solid var(--border-color);
 }
 

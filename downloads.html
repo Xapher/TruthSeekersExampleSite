@@ -29,17 +29,22 @@
         <div class="downloads-layout">
             <!-- Left: Buttons -->
             <div class="buttons-sidebar">
-                <button class="ActiveButton" onclick="loadPdf('lesson1', this)">Lesson 1: Introduction</button>
-                <button class="" onclick="loadPdf('lesson2', this)">Lesson 2: The Basics</button>
-                <button class="" onclick="loadPdf('lesson3', this)">Lesson 3: Intermediate</button>
-                <button class="" onclick="loadPdf('lesson4', this)">Lesson 4: Advanced</button>
-                <button class="" onclick="loadPdf('lesson5', this)">Lesson 5: Expert</button>
-                <button class="" onclick="loadPdf('lesson6', this)">Lesson 6: Conclusion</button>
+                <button class="ActiveButton" onclick="LoadDownloads('1')">Lesson 1: The InComparable Book</button>
+                <button class="" onclick="LoadDownloads('2')">Lesson 2: A Relationship Broken</button>
+                <button class="" onclick="LoadDownloads('3')">Lesson 3: Redemption</button>
+                <button class="" onclick="LoadDownloads('4')">Lesson 4: Salvation In Christ</button>
+                <button class="" onclick="LoadDownloads('5')">Lesson 5: The Church Part I</button>
+                <button class="" onclick="LoadDownloads('6')">Lesson 6: The Church Part II</button>
             </div>
             
-            <!-- Right: PDF Preview -->
-            <div class="preview-area">
-                <iframe id="download-preview-frame" src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" title="PDF Preview"></iframe>
+            <div id="DownloadContents">
+                <nav>
+                    <button>Download All</button>
+                    <a href="" download id="HiddenDownloadButton" class="non-active"></a>
+                </nav>
+                <div id="DownloadPreviews">
+                    
+                </div>
             </div>
         </div>
     </section>

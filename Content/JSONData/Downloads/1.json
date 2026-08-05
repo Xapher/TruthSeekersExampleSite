@@ -1,0 +1,10 @@
+{
+  "Separated": [
+    {"TapeFront": "The Imcomparable Book (Lesson One) side 1.mp3"},
+    {"TapeBack": "The Imcomparable Book (Lesson One) side 2.mp3"},
+    {"SheetFront": "./Content/LessonSheets/1/front.html"},
+    {"SheetBack": "./Content/LessonSheets/1/back.html"},
+    {"Transcript": "./Content/"}
+  ],
+  "Full": "./Content/Full/1.zip"
+}

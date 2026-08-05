@@ -4,8 +4,6 @@ var FileBase = "Peter Merrick - ";
 var TapeSide = 1;
 var SelectedLesson = 1;
 
-var Lessons =["", "A Relationship Broken (Lesson 2) side _Side_.mp3"];
-
 var LessonAudio;
 var FlipButton;
 
@@ -34,6 +32,13 @@ var DynamicMobileButton;
 var TempID = "";
 
 function InitializeLessons() {
+	if(window.location.href.includes('?')){
+		const params = new URLSearchParams(window.location.search);
+		SelectedLesson = parseInt(params.get('lesson'));
+	}
+	else {
+		SelectedLesson = 1;
+	}
 	//Load the URL ? = 1, 2, 3, 4, 5
 
 	LessonAudio = document.getElementById('LessonPlayer');
@@ -47,11 +52,7 @@ function InitializeLessons() {
 	WorksheetSideTwo = document.getElementById('SideTwoContainer');
 
 	LoadLesson();
-	
 	ShowFront();	
-
-  
-
 	if(isMobile()){
 		RightColumn.classList.add('non-active');
 		LeftColumn.classList.add('active');
@@ -76,6 +77,11 @@ function InitializeLessons() {
 			  console.log(`Is: ${LessonAudio.currentTime} between: ${TimeBegin}-${TimeEnd}`);
 			  if(LessonAudio.currentTime >= TimeBegin && LessonAudio.currentTime < TimeEnd){
 			  	LessonTranscript.childNodes[i].classList.add('ActiveTranscript');
+			  	LessonTranscript.childNodes[i].scrollIntoView({ 
+					  behavior: 'smooth', // 'auto' or 'smooth'
+					  block: 'start',     // 'start', 'center', 'end', or 'nearest'
+					  inline: 'nearest'   // 'start', 'center', 'end', or 'nearest'
+					});
 			  }
 	  	}
 		  
@@ -227,7 +233,7 @@ function isMobile() {
 
 async function LoadLesson() {
 	LessonTranscript.innerHTML = "";
-	response = await fetch('./Content/JSONData/LessonOne.json');
+	response = await fetch('./Content/JSONData/" + SelectedLesson + ".json');
 
 	LessonJSON = await response.json();
 	SelectedTape = LessonJSON["FileContents"]["FilePath"];
