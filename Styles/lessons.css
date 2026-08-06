@@ -62,6 +62,26 @@
     padding: 15px;
 }
 
+
+
+
+#SideOneContainer, #SideTwoContainer {
+    scale:0.5;
+    transform-origin: 0 0;
+    width: 200%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .split-layout {
     display: flex;
     gap: 1.5rem;

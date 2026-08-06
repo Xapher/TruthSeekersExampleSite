@@ -141,10 +141,6 @@ img
         width: 100%;
     }
 
-    /* Change 2-column grids to 1-column grids */
-    .Grid4x4 {
-        grid-template-columns: 1fr;
-    }
 
     /* Prevent hardcoded heights from squishing vertical content */
     .DiagramContainer {
