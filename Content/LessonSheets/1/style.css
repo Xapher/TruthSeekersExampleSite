@@ -8,6 +8,7 @@ p {
 
 h1{
     text-decoration: underline;
+    font-size: clamp(0px, 5vw, 2vw);
 }
 
 #UpperDiagram{
@@ -47,6 +48,10 @@ img
 
 .FullWidth {
     width: 100%;
+}
+
+.FullHeight {
+    height: 100%;
 }
 
 .RowDiagram {
@@ -116,4 +121,8 @@ img
 
 .CenteredText {
     text-align: center;
+}
+
+.BlackBackground {
+    background: black;
 }
