@@ -1,147 +1,106 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book of Books</title>
-    <link rel="stylesheet" type="text/css" href="./Content/LessonSheets/1/style.css">
-</head>
-<body>
+<link rel="stylesheet" type="text/css" href="./Content/LessonSheets/1/style.css">
+<link rel="stylesheet" type="text/css" href="style.css">
 
-    <!-- Top Section -->
-    <div class="top-section">
-        <h1 class="main-title">BOOK OF BOOKS</h1>
-        
-        <div class="chart-board">
-            <div class="cross"></div>
-            
-            <div class="chart-headers">
-                <div class="header-col">
-                    <div class="testament-title">OLD TESTAMENT</div>
-                    <div>39 BOOKS</div>
-                </div>
-                <div class="header-col right">
-                    <div class="testament-title">NEW TESTAMENT</div>
-                    <div>27 BOOKS</div>
-                </div>
-            </div>
+<div id="UpperDiagram"class="DiagramContainer">
+	<div class="WhiteDiagram InsetDiagram ColumnDiagram">
+		<div class="FullWidth">
+			<div class="left">
+				<p>Old Testament</p>
+				<p>-------------</p>
+				<p>39 Book</p>
+			</div>
+			<div class="right">
+				<p>New Testament</p>
+				<p>-------------</p>
+				<p>27 Books</p>
+			</div>
+		</div>
+		<div class="RowDiagram InsetDiagram">
+			<div class="Grid4x4 HalfWidth">
+				<div class="BorderedDiagram CenteredText">
+					<h1>Law</h1>
+					<p>Genisis</p>
+					<div class="arrow-down Centered"></div>
+					<p>Exodus</p>
+				</div>
+				<div class="BorderedDiagram CenteredText">
+					<h1>History</h1>
+					<p>Joshua</p>
+					<div class="arrow-down Centered"></div>
+					<p>Esther</p>
+				</div>
+				<div class="BorderedDiagram CenteredText">
+					<h1>Poetry</h1>
+					<p>Job</p>
+					<div class="arrow-down Centered"></div>
+					<p>Song of Solomon</p>
+				</div>
+				<div class="BorderedDiagram CenteredText">
+					<h1>Prophecy</h1>
+					<div class="Grid4x4">
+						<div>
+							<p>Major: 5</p>
+							<p>Isaiah</p>
+							<div class="arrow-down Centered"></div>
+							<p>Daniel</p>
+						</div>
 
-            <div class="categories-container">
-                <!-- Old Testament Grid -->
-                <div class="category-grid">
-                    <div class="box">
-                        <span class="box-title">LAW</span><br>
-                        GENESIS<br>
-                        <div class="arrow">&darr;</div>
-                        DEUTERONOMY
-                    </div>
-                    <div class="box">
-                        <span class="box-title">HISTORY</span><br>
-                        JOSHUA<br>
-                        <div class="arrow">&darr;</div>
-                        ESTHER
-                    </div>
-                    <div class="box">
-                        <span class="box-title">POETRY</span><br>
-                        JOB<br>
-                        <div class="arrow">&darr;</div>
-                        SONG OF<br>SOLOMON
-                    </div>
-                    <div class="box">
-                        <span class="box-title">PROPHECY</span>
-                        <div class="prophecy-group">
-                            <div>ISAIAH<br><span class="arrow" style="font-size:14px;">&darr;</span><br>DANIEL</div>
-                            <div>Major<br>5</div>
-                        </div>
-                        <div class="prophecy-divider"></div>
-                        <div class="prophecy-group">
-                            <div>HOSEA<br><span class="arrow" style="font-size:14px;">&darr;</span><br>MALACHI</div>
-                            <div>Minor<br>12</div>
-                        </div>
-                    </div>
-                </div>
+						<div>
+							<p>Minor: 12</p>
+							<p>Isaiah</p>
+							<div class="arrow-down Centered"></div>
+							<p>Daniel</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>test</div>
+			<div class="Grid4x4 HalfWidth">
+					<div class="BorderedDiagram CenteredText">
+						<h1>Biography</h1>
+						<p>Matthew</p>
+						<div class="arrow-down Centered"></div>
+						<p>John</p>
+					</div>
+					<div class="BorderedDiagram CenteredText">
+						<h1>History</h1>
+						<p>Acts</p>
+					</div>
+					<div class="BorderedDiagram CenteredText">
+						<h1>Poetry</h1>
+						<p>Romans</p>
+						<div class="arrow-down Centered"></div>
+						<p>Jude</p>
+					</div>
+					<div class="BorderedDiagram CenteredText">
+						<h1>Prophecy</h1>
+						<p>Revelation</p>
+					</div>
+				</div>
+		</div>
+	</div>
+</div>
 
-                <!-- New Testament Grid -->
-                <div class="category-grid">
-                    <div class="box">
-                        <span class="box-title">BIOGRAPHY</span><br>
-                        MATTHEW<br>
-                        <div class="arrow">&darr;</div>
-                        JOHN
-                    </div>
-                    <div class="box">
-                        <span class="box-title">HISTORY</span><br><br>
-                        ACTS<br><br>
-                    </div>
-                    <div class="box">
-                        <span class="box-title">EPISTLES</span><br>
-                        ROMANS<br>
-                        <div class="arrow">&darr;</div>
-                        JUDE
-                    </div>
-                    <div class="box">
-                        <span class="box-title">PROPHECY</span><br><br>
-                        REVELATION<br><br>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bottom Section -->
-    <div class="bottom-section">
-        <hr class="divider-line">
-        
-        <h2 class="bottom-title">OLD TESTAMENT</h2>
-
-        <div class="books-layout">
-            <!-- Law Books -->
-            <div class="books-column">
-                <div class="books-subtitle">LAW&mdash;FIVE BOOKS</div>
-                <div class="book-stack">
-                    <div class="book" style="height: 140px;">Genesis</div>
-                    <div class="book" style="height: 135px;">Exodus</div>
-                    <div class="book" style="height: 130px;">Leviticus</div>
-                    <div class="book" style="height: 135px;">Numbers</div>
-                    <div class="book" style="height: 140px;">Deuteronomy</div>
-                </div>
-                <div class="description-text">
-                    Beginning<br>
-                    Birth of Israel<br>
-                    Law of Moses
-                </div>
-            </div>
-
-            <!-- History Books -->
-            <div class="books-column">
-                <div class="books-subtitle">HISTORY&mdash;TWELVE BOOKS</div>
-                <div class="book-stack history">
-                    <!-- Adjusted markup wrapper styling dynamically -->
-                    <div>
-                        <div class="book" style="height: 130px;">Joshua</div>
-                        <div class="book" style="height: 120px;">Judges</div>
-                        <div class="book" style="height: 110px;">Ruth</div>
-                        <div class="book" style="height: 130px;">1 Samuel</div>
-                        <div class="book" style="height: 130px;">2 Samuel</div>
-                    </div>
-                    <div>
-                        <div class="book" style="height: 130px;">1 Kings</div>
-                        <div class="book" style="height: 130px;">2 Kings</div>
-                        <div class="book" style="height: 140px;">1 Chronicles</div>
-                        <div class="book" style="height: 140px;">2 Chronicles</div>
-                        <div class="book" style="height: 120px;">Ezra</div>
-                        <div class="book" style="height: 130px;">Nehemiah</div>
-                        <div class="book" style="height: 120px;">Esther</div>
-                    </div>
-                </div>
-                <div class="description-text">
-                    History of Israel from their possession of the land<br>
-                    to captivity and return
-                </div>
-            </div>
-        </div>
-        
-    </div>
-
-</body>
-</html>
+<div id="LowerDiagram" class="DiagramContainer">
+	<h1>Old Testament</h1>
+	<div class="FullWidth">
+		<div class="left">
+			<p>LAW: Five Books</p>
+		</div>
+		<div class="right">
+			<p>History: Twelve Books</p>
+		</div>
+	</div>
+	<div class="FullWidth Grid4x4">
+		<div>
+			<img class="InsetWidth" src="../../../Content/Images/LessonOneImage1.png">
+			<p>Beginning</p>
+			<p>Birth of Israel</p>
+			<p>Law of Moses</p>
+		</div>
+		<div>
+			<img class="InsetWidth" src="../../../Content/Images/LessonOneImage2.png">
+			<p>History of ISrael from their possession of the land to captivity and return</p>
+		</div>
+	</div>
+</div>
