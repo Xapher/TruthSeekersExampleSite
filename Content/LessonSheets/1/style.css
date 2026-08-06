@@ -129,6 +129,47 @@ img
 }
 
 
+/* --- Mobile Responsiveness Updates --- */
 @media (max-width: 768px) {
-    
+    /* Stack flex-rows vertically */
+    .RowDiagram {
+        flex-direction: column;
+    }
+
+    /* Override widths so content spans the screen */
+    .HalfWidth {
+        width: 100%;
+    }
+
+    /* Change 2-column grids to 1-column grids */
+    .Grid4x4 {
+        grid-template-columns: 1fr;
+    }
+
+    /* Prevent hardcoded heights from squishing vertical content */
+    .DiagramContainer {
+        height: auto;
+        min-height: 50vh;
+    }
+
+    /* Convert full-width floating headers to centered stacked headers */
+    .FullWidth {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Remove floats for mobile layouts */
+    .left, .right {
+        float: none;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    /* Turn the full-height vertical black line into a horizontal divider */
+    .BlackBackground {
+        height: 2px;
+        width: 100%;
+        margin: 15px 0;
+    }
 }
