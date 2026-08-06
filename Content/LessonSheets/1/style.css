@@ -4,12 +4,10 @@
 
 p {
     font-weight: bold;
-    font-size: clamp(0px, 5vw, 2vw);
 }
 
 h1{
     text-decoration: underline;
-    font-size: clamp(0px, 5vw, 2vw);
 }
 
 #UpperDiagram{
