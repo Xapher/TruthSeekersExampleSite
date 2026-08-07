@@ -157,4 +157,8 @@ img
         width: 100%;
         margin: 15px 0;
     }
+    .VerticalText {
+        writing-mode: sideways-lr;
+        text-orientation: sideways;
+    }
 }
