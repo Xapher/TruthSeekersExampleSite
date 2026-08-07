@@ -129,6 +129,9 @@ img
     color: black;
 }
 
+.VerticalText {
+    text-orientation: upright;
+}
 
 @media (max-width: 768px) {
     /* Stack flex-rows vertically */
