@@ -134,6 +134,11 @@ img
     text-orientation: upright; 
 }
 
+
+.WhiteText{
+    color: white;
+}
+
 @media (max-width: 768px) {
     /* Stack flex-rows vertically */
     .RowDiagram {
