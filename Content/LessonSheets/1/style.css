@@ -149,6 +149,10 @@ img
     flex-direction: row;
 }
 
+.FitHeight{
+    height: fit-content;
+}
+
 @media (max-width: 768px) {
     /* Stack flex-rows vertically */
     .RowDiagram {
