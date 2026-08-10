@@ -144,6 +144,11 @@ img
     height: 33%;
 }
 
+.FlexRows {
+    display: flex;
+    flex-direction: row;
+}
+
 @media (max-width: 768px) {
     /* Stack flex-rows vertically */
     .RowDiagram {
