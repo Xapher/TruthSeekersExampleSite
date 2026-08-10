@@ -1,6 +1,6 @@
  /* Base Styles */
 :root {
-    --primary: #2222AA;
+    --primary: #000041;
     --bg-color: #f8fafc;
     --text-color: #1e293b;
     --border-color: #e2e8f0;
@@ -10,6 +10,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+.Blue{ 
+    color: var(--primary);
 }
 
 body {

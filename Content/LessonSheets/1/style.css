@@ -134,9 +134,14 @@ img
     text-orientation: upright; 
 }
 
-
 .WhiteText{
     color: white;
+}
+
+
+
+.ThirdHeight{
+    height: 33%;
 }
 
 @media (max-width: 768px) {
