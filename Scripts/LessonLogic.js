@@ -25,8 +25,8 @@ window.onload = function() {
 
 var response;
 
-var TimeBegin = 0;
-var TimeEnd = 5;
+var TimeBegin = -1;
+var TimeEnd = -1;
 
 var DynamicMobileButton;
 var TempID = "";
@@ -72,17 +72,19 @@ function InitializeLessons() {
 	  	LessonTranscript.childNodes[i].classList.remove('ActiveTranscript');
 	  	if(parseInt(TempID.split(':')[0]) == TapeSide){
 	  		TempID = TempID.split(':')[1];
-	  		TimeBegin = parseFloat(TempID.split('-')[0]);
-			  TimeEnd = parseFloat(TempID.split('-')[1]);
-			  console.log(`Is: ${LessonAudio.currentTime} between: ${TimeBegin}-${TimeEnd}`);
-			  if(LessonAudio.currentTime >= TimeBegin && LessonAudio.currentTime < TimeEnd){
-			  	LessonTranscript.childNodes[i].classList.add('ActiveTranscript');
-			  	LessonTranscript.childNodes[i].scrollIntoView({ 
-					  behavior: 'smooth', // 'auto' or 'smooth'
-					  block: 'start',     // 'start', 'center', 'end', or 'nearest'
-					  inline: 'nearest'   // 'start', 'center', 'end', or 'nearest'
-					});
-			  }
+	  		if(parseFloat(TempID.split('-')[0]) != TimeBegin){
+	  			TimeBegin = parseFloat(TempID.split('-')[0]);
+				  TimeEnd = parseFloat(TempID.split('-')[1]);
+				  console.log(`Is: ${LessonAudio.currentTime} between: ${TimeBegin}-${TimeEnd}`);
+				  if(LessonAudio.currentTime >= TimeBegin && LessonAudio.currentTime < TimeEnd){
+				  	LessonTranscript.childNodes[i].classList.add('ActiveTranscript');
+				  	LessonTranscript.childNodes[i].scrollIntoView({ 
+						  behavior: 'smooth', // 'auto' or 'smooth'
+						  block: 'start',     // 'start', 'center', 'end', or 'nearest'
+						  inline: 'nearest'   // 'start', 'center', 'end', or 'nearest'
+						});
+				  }
+	  		}
 	  	}
 		  
 	  }
