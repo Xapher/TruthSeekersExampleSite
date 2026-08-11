@@ -39,8 +39,6 @@ function InitializeLessons() {
 	else {
 		SelectedLesson = 1;
 	}
-	//Load the URL ? = 1, 2, 3, 4, 5
-
 	LessonAudio = document.getElementById('LessonPlayer');
 	FlipButton = document.getElementById('TapeSide');
 	LeftColumn = document.getElementById('LeftColumn');
@@ -79,14 +77,13 @@ function InitializeLessons() {
 				  if(LessonAudio.currentTime >= TimeBegin && LessonAudio.currentTime < TimeEnd){
 				  	LessonTranscript.childNodes[i].classList.add('ActiveTranscript');
 				  	LessonTranscript.childNodes[i].scrollIntoView({ 
-						  behavior: 'smooth', // 'auto' or 'smooth'
-						  block: 'start',     // 'start', 'center', 'end', or 'nearest'
-						  inline: 'nearest'   // 'start', 'center', 'end', or 'nearest'
+						  behavior: 'smooth', 
+						  block: 'start',  
+						  inline: 'nearest' 
 						});
 				  }
 	  		}
 	  	}
-		  
 	  }
 	});
 
