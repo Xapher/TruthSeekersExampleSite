@@ -1,4 +1,5 @@
-* {
+@scope (.left-column) {
+    * {
     margin: 2px;
 }
 
@@ -177,7 +178,8 @@ img
         margin: 15px 0;
     }
     .VerticalText {
-        writing-mode: sideways-lr;
+        writing-mode: lr;
         text-orientation: sideways;
     }
+}
 }

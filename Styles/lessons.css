@@ -98,28 +98,8 @@ audio {
     height: 40px; /* slightly compacter on mobile */
 }
 
-
-
-
-iframe {
-    width: 100%;
-    border: none;
-    min-height: 400px; /* Ensures iframe doesn't collapse */
-}
-
-
-
 .left-column {
-        height: 100vh; /* Give PDF a distinct height on mobile */
-}
-
-iframe{
-    height: 100%;
-    scale: 0.5;
-    transform-origin: 0 0;
-    flex: none;
-    width: 100vw;
-    width: calc(200%); /* 200% */
+    height: 100vh; /* Give PDF a distinct height on mobile */
 }
 
 
