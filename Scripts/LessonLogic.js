@@ -35,7 +35,7 @@ function InitializeLessons() {
 	if(window.location.href.includes('?')){
 		const params = new URLSearchParams(window.location.search);
 		SelectedLesson = parseInt(params.get('lesson'));
-		console.log("Loading Lesson: " SelectedLesson);
+		console.log("Loading Lesson: " + SelectedLesson);
 	}
 	else {
 		SelectedLesson = 1;

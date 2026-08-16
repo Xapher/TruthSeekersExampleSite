@@ -127,7 +127,6 @@ audio {
     .left-column, .right-column {
         flex: 1;
         background: white;
-        border: 1px solid var(--border-color);
         border-radius: 8px;
         
         display: flex;
@@ -162,7 +161,6 @@ audio {
     .left-column, .right-column {
         flex: 1;
         background: white;
-        border: 1px solid var(--border-color);
         border-radius: 8px;
         flex-direction: column;
     }
