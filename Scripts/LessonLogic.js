@@ -34,7 +34,7 @@ var TempID = "";
 function InitializeLessons() {
 	if(window.location.href.includes('?')){
 		const params = new URLSearchParams(window.location.search);
-		SelectedLesson = parseInt(params.get('lesson'));
+		SelectedLesson = parseInt(params.get('i'));
 		console.log("Loading Lesson: " + SelectedLesson);
 	}
 	else {
