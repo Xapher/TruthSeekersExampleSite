@@ -5,12 +5,12 @@
 
     p {
         font-weight: bold;
-        font-size: 40px;
+        
     }
 
     h1{
         text-decoration: underline;
-        font-size: 65px;
+        
     }
 
     #UpperDiagram{
@@ -153,7 +153,26 @@
         height: fit-content;
     }
 
+    @media {min-width: 768px}{
+        h1{
+            font-size: 50px;
+        }
+
+        p{
+            font-size: 20px;
+        }
+    }
+
+
     @media (max-width: 768px) {
+
+        h1{
+            font-size: 65px;
+        }
+
+        p{
+            font-size: 40px;
+        }
         /* Stack flex-rows vertically */
         .RowDiagram {
             flex-direction: column;
