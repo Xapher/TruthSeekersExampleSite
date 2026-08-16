@@ -133,10 +133,6 @@ audio {
         flex-direction: column;
     }
 
-    .split-layout{
-        height: 100vh;
-    }
-
     #lessons
     {
         padding-bottom: 500px;
@@ -150,6 +146,7 @@ audio {
     /* Stack the lessons split screen */
     .split-layout {
         display: block;
+        padding-bottom: 100px;
     }
 
     #lessons{
