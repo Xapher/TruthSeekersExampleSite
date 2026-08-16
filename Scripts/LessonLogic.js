@@ -5,7 +5,7 @@ var TapeSide = 1;
 var SelectedLesson = 1;
 
 var LessonAudio;
-var FlipButton;
+var FlipButton, MobileFlipButton;
 
 var LeftColumn;
 var RightColumn;
@@ -42,6 +42,7 @@ function InitializeLessons() {
 	}
 	LessonAudio = document.getElementById('LessonPlayer');
 	FlipButton = document.getElementById('TapeSide');
+	MobileFlipButton = document.getElementById('TapeSideMobile');
 	LeftColumn = document.getElementById('LeftColumn');
 	RightColumn = document.getElementById('RightColumn');
 	LessonTranscript = document.getElementById('LessonTranscript');
@@ -131,10 +132,12 @@ function SwitchSides(){
 	if (TapeSide == 1) {
 		TapeSide = 2;
 		FlipButton.innerHTML = "Flip Tape: 1";
+		MobileFlipButton.innerHTML = "Flip Tape: 1";
 	}
 	else {
 		TapeSide = 1;
 		FlipButton.innerHTML = "Flip Tape: 2";
+		MobileFlipButton.innerHTML = "Flip Tape: 2";
 	}
 
 	LoadTapeAndSide();
