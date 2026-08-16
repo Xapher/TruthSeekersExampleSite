@@ -43,6 +43,7 @@
 
     .HalfWidth {
         width: 50%;
+        min-width: 48%;
     }
 
     .FullWidth {
