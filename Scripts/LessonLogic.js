@@ -35,6 +35,7 @@ function InitializeLessons() {
 	if(window.location.href.includes('?')){
 		const params = new URLSearchParams(window.location.search);
 		SelectedLesson = parseInt(params.get('lesson'));
+		console.log("Loading Lesson: " SelectedLesson);
 	}
 	else {
 		SelectedLesson = 1;
@@ -243,4 +244,13 @@ async function LoadLesson() {
 
   LoadSheetFront();
 	LoadSheetBack();
+}
+
+
+
+
+
+
+function ChangeLesson(lesson){
+
 }

@@ -12,7 +12,7 @@
     }
 
     #UpperDiagram{
-        background: darkblue;
+        background: #000041;
     }
 
     img
@@ -28,9 +28,6 @@
       border-right: 10px solid transparent;
       border-top: 10px solid black; /* Points down */
     }
-
-
-
 
     .left {
         float: left;
