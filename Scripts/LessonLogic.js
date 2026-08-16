@@ -252,5 +252,5 @@ async function LoadLesson() {
 
 
 function ChangeLesson(lesson){
-
+	window.location.href = "https://xapher.github.io/TruthSeekersExampleSite/lessons.html?i=" + lesson;
 }
