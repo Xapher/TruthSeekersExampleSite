@@ -130,11 +130,11 @@ function HideBack(){
 function SwitchSides(){
 	if (TapeSide == 1) {
 		TapeSide = 2;
-		FlipButton.innerHTML = "Switch to Side: 1";
+		FlipButton.innerHTML = "Flip Tape: 1";
 	}
 	else {
 		TapeSide = 1;
-		FlipButton.innerHTML = "Switch to Side: 2";
+		FlipButton.innerHTML = "Flip Tape: 2";
 	}
 
 	LoadTapeAndSide();
@@ -190,7 +190,7 @@ function InitializeMobile(){
 
 	LeftColumn.classList.remove('non-active');
 	LeftColumn.classList.add('active');
-	DynamicMobileButton.textContent = "Switch to: Back";
+	DynamicMobileButton.textContent = "Flip Worksheet: Back";
 }
 
 function ChangeMobileSheetSide(){
@@ -207,7 +207,7 @@ function ShowMobileTranscript(){
 	RightColumn.classList.add('active');
 	LeftColumn.classList.add('non-active');
 	LeftColumn.classList.remove('active');
-	DynamicMobileButton.textContent = "Switch to: Front";
+	DynamicMobileButton.textContent = "Go To Worksheet: Front";
 }
 
 
