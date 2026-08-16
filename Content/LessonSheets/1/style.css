@@ -153,6 +153,10 @@
         height: fit-content;
     }
 
+    .FitWidth {
+        width: fit-content;
+    }
+
     @media {min-width: 768px}{
         h1{
             font-size: 50px;
