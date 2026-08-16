@@ -5,10 +5,12 @@
 
     p {
         font-weight: bold;
+        font-size: 40px;
     }
 
     h1{
         text-decoration: underline;
+        font-size: 65px;
     }
 
     #UpperDiagram{
