@@ -30,7 +30,7 @@ var TimeEnd = -1;
 
 var DynamicMobileButton;
 var TempID = "";
-var LastIndex = 0;
+var LastIndex = -1;
 
 function InitializeLessons() {
 	if(window.location.href.includes('?')){
@@ -71,8 +71,6 @@ function InitializeLessons() {
 	  for (var i = 0; i < LessonTranscript.childNodes.length; i++) {
 	  	if(i != LastIndex) {
 	  		LessonTranscript.childNodes[i].classList.remove('ActiveTranscript');
-	  	}
-	  	if(i >= LastIndex){
 	  		TempID = LessonTranscript.childNodes[i].id;
 		  	if(parseInt(TempID.split(':')[0]) == TapeSide){
 		  		TempID = TempID.split(':')[1];
@@ -83,7 +81,7 @@ function InitializeLessons() {
 				  	LessonTranscript.childNodes[i].scrollIntoView({ 
 						  behavior: 'smooth', 
 						  block: 'start',  
-						  inline: 'nearest' 
+						  inline: 'center' 
 						});
 						LastIndex = i;
 				  }
