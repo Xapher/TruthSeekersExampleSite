@@ -80,8 +80,8 @@ function InitializeLessons() {
 				  	LessonTranscript.childNodes[i].classList.add('ActiveTranscript');
 				  	LessonTranscript.childNodes[i].scrollIntoView({ 
 						  behavior: 'smooth', 
-						  block: 'start',  
-						  inline: 'center' 
+						  block: 'center',  
+						  inline: 'nearest' 
 						});
 						LastIndex = i;
 				  }
