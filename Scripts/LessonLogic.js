@@ -69,26 +69,23 @@ function InitializeLessons() {
 	  console.log(`Current time: ${LessonAudio.currentTime}`);
 	  //Eh, get some of the <p> ids and compare it to time for active boxes
 	  for (var i = 0; i < LessonTranscript.childNodes.length; i++) {
-	  	if(i != LastIndex){
+	  	if(i != LastIndex) {
 	  		LessonTranscript.childNodes[i].classList.remove('ActiveTranscript');
 	  	}
 	  	
-	  	if(i >= LastIndex){
-				TempID = LessonTranscript.childNodes[i].id;
-		  	if(parseInt(TempID.split(':')[0]) == TapeSide){
-		  		TempID = TempID.split(':')[1];
-	  			TimeBegin = parseFloat(TempID.split('-')[0]);
-				  TimeEnd = parseFloat(TempID.split('-')[1]);
-				  if(LessonAudio.currentTime >= TimeBegin && LessonAudio.currentTime < TimeEnd){
-				  	LessonTranscript.childNodes[i].classList.add('ActiveTranscript');
-				  	LessonTranscript.childNodes[i].scrollIntoView({ 
-						  behavior: 'smooth', 
-						  block: 'start',  
-						  inline: 'nearest' 
-						});
-				  }
-				  LastIndex = i;
-		  	}
+	  	TempID = LessonTranscript.childNodes[i].id;
+	  	if(parseInt(TempID.split(':')[0]) == TapeSide){
+	  		TempID = TempID.split(':')[1];
+  			TimeBegin = parseFloat(TempID.split('-')[0]);
+			  TimeEnd = parseFloat(TempID.split('-')[1]);
+			  if(LessonAudio.currentTime >= TimeBegin && LessonAudio.currentTime < TimeEnd){
+			  	LessonTranscript.childNodes[i].classList.add('ActiveTranscript');
+			  	LessonTranscript.childNodes[i].scrollIntoView({ 
+					  behavior: 'smooth', 
+					  block: 'start',  
+					  inline: 'nearest' 
+					});
+			  }
 	  	}
 	  }
 	});
