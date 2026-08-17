@@ -78,7 +78,7 @@ function InitializeLessons() {
 		  		TempID = TempID.split(':')[1];
 	  			TimeBegin = parseFloat(TempID.split('-')[0]);
 				  TimeEnd = parseFloat(TempID.split('-')[1]);
-				  if(LessonAudio.currentTime >= TimeBegin && LessonAudio.currentTime < TimeEnd){
+				  if(LessonAudio.currentTime >= TimeBegin && LessonAudio.currentTime < TimeEnd && i != LastIndex){
 				  	LessonTranscript.childNodes[i].classList.add('ActiveTranscript');
 				  	LessonTranscript.childNodes[i].scrollIntoView({ 
 						  behavior: 'smooth', 
