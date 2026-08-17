@@ -70,23 +70,22 @@ function InitializeLessons() {
 	  //Eh, get some of the <p> ids and compare it to time for active boxes
 	  for (var i = 0; i < LessonTranscript.childNodes.length; i++) {
 	  	if(TempID != LessonTranscript.childNodes[i].id){
-
-	  	}
-	  	TempID = LessonTranscript.childNodes[i].id;
-	  	LessonTranscript.childNodes[i].classList.remove('ActiveTranscript');
-	  	if(parseInt(TempID.split(':')[0]) == TapeSide){
-	  		IDSplit = TempID.split(':')[1];
-  			TimeBegin = parseFloat(IDSplit.split('-')[0]);
-			  TimeEnd = parseFloat(IDSplit.split('-')[1]);
-			  console.log(`Is: ${LessonAudio.currentTime} between: ${TimeBegin}-${TimeEnd}`);
-			  if(LessonAudio.currentTime >= TimeBegin && LessonAudio.currentTime < TimeEnd){
-			  	LessonTranscript.childNodes[i].classList.add('ActiveTranscript');
-			  	LessonTranscript.childNodes[i].scrollIntoView({ 
-					  behavior: 'smooth', 
-					  block: 'start',  
-					  inline: 'nearest' 
-					});
-			  }
+				TempID = LessonTranscript.childNodes[i].id;
+		  	LessonTranscript.childNodes[i].classList.remove('ActiveTranscript');
+		  	if(parseInt(TempID.split(':')[0]) == TapeSide){
+		  		IDSplit = TempID.split(':')[1];
+	  			TimeBegin = parseFloat(IDSplit.split('-')[0]);
+				  TimeEnd = parseFloat(IDSplit.split('-')[1]);
+				  console.log(`Is: ${LessonAudio.currentTime} between: ${TimeBegin}-${TimeEnd}`);
+				  if(LessonAudio.currentTime >= TimeBegin && LessonAudio.currentTime < TimeEnd){
+				  	LessonTranscript.childNodes[i].classList.add('ActiveTranscript');
+				  	LessonTranscript.childNodes[i].scrollIntoView({ 
+						  behavior: 'smooth', 
+						  block: 'start',  
+						  inline: 'nearest' 
+						});
+				  }
+		  	}
 	  	}
 	  }
 	});
