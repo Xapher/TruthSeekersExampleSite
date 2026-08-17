@@ -115,7 +115,7 @@ audio {
 }
 
 .ActiveTranscript{
-    background-color: lightblue;
+    background-color: #000022;
     border-radius: 5px;
     border: blue 2px solid;
     padding: 5px;
