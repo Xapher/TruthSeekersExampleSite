@@ -30,6 +30,7 @@ var TimeEnd = -1;
 
 var DynamicMobileButton;
 var TempID = "";
+var IDSplit = "";
 
 function InitializeLessons() {
 	if(window.location.href.includes('?')){
@@ -68,23 +69,24 @@ function InitializeLessons() {
 	  console.log(`Current time: ${LessonAudio.currentTime}`);
 	  //Eh, get some of the <p> ids and compare it to time for active boxes
 	  for (var i = 0; i < LessonTranscript.childNodes.length; i++) {
+	  	if(TempID != LessonTranscript.childNodes[i].id){
+
+	  	}
 	  	TempID = LessonTranscript.childNodes[i].id;
 	  	LessonTranscript.childNodes[i].classList.remove('ActiveTranscript');
 	  	if(parseInt(TempID.split(':')[0]) == TapeSide){
-	  		TempID = TempID.split(':')[1];
-	  		if(parseFloat(TempID.split('-')[0]) != TimeBegin){
-	  			TimeBegin = parseFloat(TempID.split('-')[0]);
-				  TimeEnd = parseFloat(TempID.split('-')[1]);
-				  console.log(`Is: ${LessonAudio.currentTime} between: ${TimeBegin}-${TimeEnd}`);
-				  if(LessonAudio.currentTime >= TimeBegin && LessonAudio.currentTime < TimeEnd){
-				  	LessonTranscript.childNodes[i].classList.add('ActiveTranscript');
-				  	LessonTranscript.childNodes[i].scrollIntoView({ 
-						  behavior: 'smooth', 
-						  block: 'start',  
-						  inline: 'nearest' 
-						});
-				  }
-	  		}
+	  		IDSplit = TempID.split(':')[1];
+  			TimeBegin = parseFloat(IDSplit.split('-')[0]);
+			  TimeEnd = parseFloat(IDSplit.split('-')[1]);
+			  console.log(`Is: ${LessonAudio.currentTime} between: ${TimeBegin}-${TimeEnd}`);
+			  if(LessonAudio.currentTime >= TimeBegin && LessonAudio.currentTime < TimeEnd){
+			  	LessonTranscript.childNodes[i].classList.add('ActiveTranscript');
+			  	LessonTranscript.childNodes[i].scrollIntoView({ 
+					  behavior: 'smooth', 
+					  block: 'start',  
+					  inline: 'nearest' 
+					});
+			  }
 	  	}
 	  }
 	});
