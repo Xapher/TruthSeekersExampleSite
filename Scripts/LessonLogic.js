@@ -30,7 +30,7 @@ var TimeEnd = -1;
 
 var DynamicMobileButton;
 var TempID = "";
-var IDSplit = "";
+var LastIndex = 0;
 
 function InitializeLessons() {
 	if(window.location.href.includes('?')){
@@ -69,10 +69,9 @@ function InitializeLessons() {
 	  console.log(`Current time: ${LessonAudio.currentTime}`);
 	  //Eh, get some of the <p> ids and compare it to time for active boxes
 	  for (var i = 0; i < LessonTranscript.childNodes.length; i++) {
-	  	console.log(`is ${TempID} == ${LessonTranscript.childNodes[i].id}`)
-	  	if(TempID != LessonTranscript.childNodes[i].id){
+	  	LessonTranscript.childNodes[i].classList.remove('ActiveTranscript');
+	  	if(i >= LastIndex){
 				TempID = LessonTranscript.childNodes[i].id;
-		  	LessonTranscript.childNodes[i].classList.remove('ActiveTranscript');
 		  	if(parseInt(TempID.split(':')[0]) == TapeSide){
 		  		IDSplit = TempID.split(':')[1];
 	  			TimeBegin = parseFloat(IDSplit.split('-')[0]);
@@ -85,6 +84,7 @@ function InitializeLessons() {
 						  inline: 'nearest' 
 						});
 				  }
+				  LastIndex = i;
 		  	}
 	  	}
 	  }
