@@ -72,20 +72,22 @@ function InitializeLessons() {
 	  	if(i != LastIndex) {
 	  		LessonTranscript.childNodes[i].classList.remove('ActiveTranscript');
 	  	}
-	  	
-	  	TempID = LessonTranscript.childNodes[i].id;
-	  	if(parseInt(TempID.split(':')[0]) == TapeSide){
-	  		TempID = TempID.split(':')[1];
-  			TimeBegin = parseFloat(TempID.split('-')[0]);
-			  TimeEnd = parseFloat(TempID.split('-')[1]);
-			  if(LessonAudio.currentTime >= TimeBegin && LessonAudio.currentTime < TimeEnd){
-			  	LessonTranscript.childNodes[i].classList.add('ActiveTranscript');
-			  	LessonTranscript.childNodes[i].scrollIntoView({ 
-					  behavior: 'smooth', 
-					  block: 'start',  
-					  inline: 'nearest' 
-					});
-			  }
+	  	if(i >= LastIndex){
+	  		TempID = LessonTranscript.childNodes[i].id;
+		  	if(parseInt(TempID.split(':')[0]) == TapeSide){
+		  		TempID = TempID.split(':')[1];
+	  			TimeBegin = parseFloat(TempID.split('-')[0]);
+				  TimeEnd = parseFloat(TempID.split('-')[1]);
+				  if(LessonAudio.currentTime >= TimeBegin && LessonAudio.currentTime < TimeEnd){
+				  	LessonTranscript.childNodes[i].classList.add('ActiveTranscript');
+				  	LessonTranscript.childNodes[i].scrollIntoView({ 
+						  behavior: 'smooth', 
+						  block: 'start',  
+						  inline: 'nearest' 
+						});
+						LastIndex = i;
+				  }
+		  	}
 	  	}
 	  }
 	});
