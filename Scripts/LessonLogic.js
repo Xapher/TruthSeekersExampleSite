@@ -73,9 +73,9 @@ function InitializeLessons() {
 	  	if(i >= LastIndex){
 				TempID = LessonTranscript.childNodes[i].id;
 		  	if(parseInt(TempID.split(':')[0]) == TapeSide){
-		  		IDSplit = TempID.split(':')[1];
-	  			TimeBegin = parseFloat(IDSplit.split('-')[0]);
-				  TimeEnd = parseFloat(IDSplit.split('-')[1]);
+		  		TempID = TempID.split(':')[1];
+	  			TimeBegin = parseFloat(TempID.split('-')[0]);
+				  TimeEnd = parseFloat(TempID.split('-')[1]);
 				  if(LessonAudio.currentTime >= TimeBegin && LessonAudio.currentTime < TimeEnd){
 				  	LessonTranscript.childNodes[i].classList.add('ActiveTranscript');
 				  	LessonTranscript.childNodes[i].scrollIntoView({ 
