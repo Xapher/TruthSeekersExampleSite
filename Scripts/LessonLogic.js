@@ -242,8 +242,9 @@ async function LoadLesson() {
 	response = await fetch('./Content/JSONData/' + SelectedLesson + '.json');
 
 	LessonJSON = await response.json();
+
 	SelectedTape = LessonJSON["FileContents"]["FilePath"];
-  
+  console.log("Setting Lesson to: " + SelectedTape);
   for (var i = 0; i < LessonJSON["TextTranscript"].length; i++) {
   	LessonTranscript.innerHTML += `<p id=${LessonJSON["TextTranscript"][i][0]} class=\"TranscriptText\">` + LessonJSON["TextTranscript"][i][1] + "</p>";
   }
