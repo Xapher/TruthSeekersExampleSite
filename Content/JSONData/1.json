@@ -1,8 +1,6 @@
 {
   "FileContents": {
-    "FilePath": "The Imcomparable Book (Lesson One) side _Side_.mp3",
-    "SheetFront": "./Content/LessonSheets/1/front.html",
-    "SheetBack": "./Content/LessonSheets/1/back.html"
+    "FilePath": "The Imcomparable Book (Lesson One) side _Side_.mp3"
   },
   "TextTranscript": [
     ["\"1:0-4.5\"", "With this lesson we begin our introduction to the world's most amazing book."],

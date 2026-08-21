@@ -95,12 +95,12 @@ function InitializeLessons() {
 
 
 async function LoadSheetFront() {
-  response = await fetch(LessonJSON["FileContents"]["SheetFront"]);
+  response = await fetch("./Content/LessonSheets/" + SelectedLesson + "/front.html");
 	WorksheetSideOne.innerHTML = await response.text()
 }
 
 async function LoadSheetBack() {
-	response = await fetch(LessonJSON["FileContents"]["SheetBack"]);
+	response = await fetch("./Content/LessonSheets/" + SelectedLesson + "/back.html");
   WorksheetSideTwo.innerHTML = await response.text()
 }
 
