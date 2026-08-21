@@ -1,6 +1,5 @@
-var SelectedTape = "The Imcomparable Book (Lesson One) side _Side_.mp3";
+var SelectedTape = "Peter Merrick - The Imcomparable Book (Lesson One) side _Side_.mp3";
 var BaseDir = "./Content/Audio/";
-var FileBase = "Peter Merrick - ";
 var TapeSide = 1;
 var SelectedLesson = 1;
 
@@ -41,7 +40,7 @@ function InitializeLessons() {
 	else {
 		SelectedLesson = 1;
 	}
-	
+
 	LessonAudio = document.getElementById('LessonPlayer');
 	FlipButton = document.getElementById('TapeSide');
 	MobileFlipButton = document.getElementById('TapeSideMobile');
@@ -146,7 +145,7 @@ function SwitchSides(){
 }
 
 function LoadTapeAndSide(){
-	LessonAudio.src = BaseDir + FileBase + SelectedTape.replace("_Side_", TapeSide);
+	LessonAudio.src = BaseDir + SelectedTape.replace("_Side_", TapeSide);
 	LessonAudio.load();
 }
 
