@@ -146,6 +146,7 @@ function SwitchSides(){
 
 function LoadTapeAndSide(){
 	console.log("Loading audio for: " + LessonAudio);
+	console.log("Why is null: " + SelectedTape);
 	LessonAudio.src = BaseDir + SelectedTape.replace("_Side_", TapeSide);
 	LessonAudio.load();
 }
