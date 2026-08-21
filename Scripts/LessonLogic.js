@@ -60,8 +60,6 @@ function InitializeLessons() {
 		InitializeMobile();
 	}
 	
-	LoadTapeAndSide();
-	
 
 
 	LessonAudio.addEventListener('timeupdate', () => {
@@ -251,6 +249,8 @@ async function LoadLesson() {
 
   LoadSheetFront();
 	LoadSheetBack();
+
+	LoadTapeAndSide();
 }
 
 
