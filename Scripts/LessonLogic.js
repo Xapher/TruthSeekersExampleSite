@@ -41,6 +41,7 @@ function InitializeLessons() {
 	else {
 		SelectedLesson = 1;
 	}
+	
 	LessonAudio = document.getElementById('LessonPlayer');
 	FlipButton = document.getElementById('TapeSide');
 	MobileFlipButton = document.getElementById('TapeSideMobile');
