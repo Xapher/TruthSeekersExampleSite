@@ -143,8 +143,6 @@ function SwitchSides(){
 }
 
 function LoadTapeAndSide(){
-	console.log("Loading audio for: " + LessonAudio);
-	console.log("Why is null: " + SelectedTape);
 	LessonAudio.src = BaseDir + SelectedTape.replace("_Side_", TapeSide);
 	LessonAudio.load();
 }
@@ -242,7 +240,6 @@ async function LoadLesson() {
 	LessonJSON = await response.json();
 
 	SelectedTape = LessonJSON["FileContents"]["FilePath"];
-  console.log("Setting Lesson to: " + SelectedTape);
   for (var i = 0; i < LessonJSON["TextTranscript"].length; i++) {
   	LessonTranscript.innerHTML += `<p id=${LessonJSON["TextTranscript"][i][0]} class=\"TranscriptText\">` + LessonJSON["TextTranscript"][i][1] + "</p>";
   }
