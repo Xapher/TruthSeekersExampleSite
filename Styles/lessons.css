@@ -143,11 +143,6 @@ audio {
         display: flex;
         flex-direction: column;
     }
-
-    #lessons
-    {
-        padding-bottom: 500px;
-    }
 }
 
 
