@@ -27,7 +27,7 @@
         height: auto;
     }
 
-    .VerticalLign {
+    .VerticalLine {
         writing-mode: vertical-lr;
         display: flex;
         align-items: center;
