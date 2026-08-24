@@ -96,7 +96,7 @@ async function SetupDiagrams() {
 		LeftColumn.innerHTML = LeftColumn.innerHTML + Temp;
 		Temp = document.getElementById(`Diagram-${i}`);
 		Temp.classList.add('ZoomOut')
-		response = await fetch(LessonJSON["FileContents"]["Diagrams"][i]);
+		response = await fetch("./Content/LessonSheets/" + SelectedLesson + "/" + LessonJSON["FileContents"]["Diagrams"][i]);
 		Temp.innerHTML = await response.text();
 		Temp.classList.add('non-active');
 	}
