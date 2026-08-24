@@ -28,6 +28,9 @@
         writing-mode: vertical-lr;
         display: flex;
         align-items: center;
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: -5px;
     }
 
     .arrow-down {
