@@ -191,4 +191,8 @@ audio {
         min-height: 400px;
         height: 50vh;
     }
+
+    #EvaluationSheet {
+    width: 100%;
+    }
 }
