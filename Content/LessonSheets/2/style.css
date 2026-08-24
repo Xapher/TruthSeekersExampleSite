@@ -114,6 +114,10 @@
         padding: 5%;
     }
 
+    .LessonTwoColumn {
+        display: grid;
+        grid-template-rows: repeat(5, 1fr);
+    }
 
     .WhiteDiagram {
         background: white;
