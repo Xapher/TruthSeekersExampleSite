@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		.Answer{
+			font-size: 20px;
+			display: none;
+		}
+		p{
+			font-size: 25px;
+		}
+
+		input{
+			font-size: 26px;
+		}
+	</style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Eval Sheet</title>
+</head>
+<script>
+	function ShowAnswers() {
+		// Select all elements with class "my-class"
+		const elements = document.querySelectorAll('.Answer');
+
+		// Loop using forEach (Cleanest)
+		elements.forEach(element => {
+		  element.style.display = 'contents';
+		});
+	}
+</script>
+	<body>
+		<h1>Evaluation Sheet for Lesson #1</h1>
+		<p>Your view of the lesson will be clearer if you read this sheet completely before studying the lesson.</p>
+		<p>The purpose of this sheet is to help you master the main points of the lesson. After doing the lesson, attempt to answer the questions mentally, looking back to the digrams or even replaying the audio if necessary. Then write the answers without referring to theose materials.</p>
+		<h1 style="text-decoration: underline;">Questions Over Diagram #1: The Book of Books.</h1>
+		<h1>Answer T (True) OR F (False)</h1>
+		<p>1. <strong class="Answer">True</strong> <input type="text" size="5" maxlength="20" placeholder="T/F">The Bible is a library of ancient books.</p>
+		<p>2. <strong class="Answer">False</strong> <input type="text" size="5" maxlength="20" placeholder="T/F">There are 74 Books in the Bible.</p>
+		<p>3. <strong class="Answer">False</strong> <input type="text" size="5" maxlength="20" placeholder="T/F">The books of 1 and 2 samuel contain the history of the early church.</p>
+		<p>4. <strong class="Answer">True</strong> <input type="text" size="5" maxlength="20" placeholder="T/F">The single purpose of a prophet was to fortell the future</p>
+		<p>5. <strong class="Answer">True</strong> <input type="text" size="5" maxlength="20" placeholder="T/F">There are 39 books in the old testament.</p>
+		<p>6. <strong class="Answer">True</strong> <input type="text" size="5" maxlength="20" placeholder="T/F">An epistle is a letter.</p>
+		<p>7. <strong class="Answer">True</strong> <input type="text" size="5" maxlength="20" placeholder="T/F">The book of Revelation is the last book of the bible.</p>
+		<h1 style="text-decoration: underline;">Questions Over Diagram #2: The incomparable book.</h1>
+		<h1>Answer T (True) OR F (False)</h1>
+		<p>8. <strong class="Answer">False</strong> <input type="text" size="5" maxlength="20" placeholder="T/F">A total of 225 years psassed from the writing the first to last books of the Bible.</p>
+		<p>9. <strong class="Answer">True</strong> <input type="text" size="5" maxlength="20" placeholder="T/F">The ancient greek translation of the Old Testament is called the septuagint Version.</p>
+		<p>10. <strong class="Answer">True</strong> <input type="text" size="5" maxlength="20" placeholder="T/F">There were about forty people involved as writers of of the Bible.</p>
+		<p>11. <strong class="Answer">False</strong> <input type="text" size="5" maxlength="20" placeholder="T/F">The only thing the bible writers had in common was a lot of education.</p>
+		<p>12. <strong class="Answer">True</strong> <input type="text" size="5" maxlength="20" placeholder="T/F">The unity of the Bible's message can be accounted for by the fact that it was written so quickly.</p>
+		<button onclick="ShowAnswers()" style="width:20%; height: 64px;font-size:24px;">Show Answers</button>
+	</body>
+</html>
