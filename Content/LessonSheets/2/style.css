@@ -27,6 +27,12 @@
         height: auto;
     }
 
+    .VerticalLign {
+        writing-mode: vertical-lr;
+        display: flex;
+        align-items: center;
+        background-color: black;
+    }
 
     .arrow-down {
       width: 0;
@@ -221,6 +227,9 @@
         .MobileFullWidth > * {
             font-size: 50px;
             display: flex;
+        }
+        .ThirdWidth {
+            width: 100%;
         }
     }
 }
