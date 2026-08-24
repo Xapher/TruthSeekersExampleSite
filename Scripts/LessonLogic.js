@@ -91,11 +91,11 @@ function InitializeLessons() {
 
 
 async function SetupDiagrams() {
-	for (var i = 0; i < LessonJSON["Diagrams"].length; i++) {
+	for (var i = 0; i < LessonJSON["FileContents"]["Diagrams"].length; i++) {
 		var Temp = `<div id=\"Diagram-${i}\"></div>`;
 		LeftColumn.innerHTML = LeftColumn.innerHTML + Temp;
 		Temp = document.getElementById(`Diagram-${i}`);
-		response = await fetch(LessonJSON["Diagrams"][i]);
+		response = await fetch(LessonJSON["FileContents"]["Diagrams"][i]);
 		Temp.innerHTML = await response.text()
 	}
 }
