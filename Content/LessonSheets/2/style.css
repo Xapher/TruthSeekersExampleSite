@@ -3,9 +3,6 @@
     margin: 2px;
     }
 
-    div > h1 {
-        margin-top: 50px;
-    }
 
     p, li,ul {
         font-weight: bold;
@@ -31,7 +28,6 @@
         writing-mode: vertical-lr;
         display: flex;
         align-items: center;
-        background-color: black;
     }
 
     .arrow-down {
