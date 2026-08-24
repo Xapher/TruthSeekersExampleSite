@@ -130,7 +130,7 @@ audio {
 
 .left-column, .right-column {
     overflow-y: scroll;
-    border-radius: black 1px solid;
+    border: black 1px solid;
 }
 
 .ActiveTranscript{
