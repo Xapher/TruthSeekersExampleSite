@@ -1,6 +1,12 @@
 {
   "FileContents": {
-    "FilePath": "Peter Merrick - The Imcomparable Book (Lesson One) side _Side_.mp3"
+    "FilePath": "Peter Merrick - The Imcomparable Book (Lesson One) side _Side_.mp3",
+    "Diagrams":[
+      "./Content/LessonSheets/1/A",
+      "./Content/LessonSheets/1/B",
+      "./Content/LessonSheets/1/C",
+      "./Content/LessonSheets/1/D"
+    ]
   },
   "TextTranscript": [
     ["\"1:0-4.5\"", "With this lesson we begin our introduction to the world's most amazing book."],

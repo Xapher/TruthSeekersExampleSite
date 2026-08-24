@@ -10,14 +10,11 @@ var LeftColumn;
 var RightColumn;
 var IframeSheet;
 
-
-var WorksheetSideOne;
-var WorksheetSideTwo;
-
 var LessonJSON;
 var LessonTranscript;
-
+var DiagramIndex = 0;
 var EvalSheet;
+
 
 window.onload = function() {
 	InitializeLessons();
@@ -91,39 +88,17 @@ function InitializeLessons() {
 	  	}
 	  }
 	});
-
 }
 
 
-
-async function LoadSheetFront() {
-  response = await fetch("./Content/LessonSheets/" + SelectedLesson + "/front.html");
-	WorksheetSideOne.innerHTML = await response.text()
-}
-
-async function LoadSheetBack() {
-	response = await fetch("./Content/LessonSheets/" + SelectedLesson + "/back.html");
-  WorksheetSideTwo.innerHTML = await response.text()
-}
-
-
-function ShowFront(){
-	WorksheetSideOne.classList.remove('non-active');
-	HideBack();
-}
-
-function ShowBack(){
-	WorksheetSideTwo.classList.remove('non-active');
-	HideFront();
-}
-
-
-function HideFront() {
-	WorksheetSideOne.classList.add('non-active');
-}
-
-function HideBack(){
-	WorksheetSideTwo.classList.add('non-active');
+async function SetupDiagrams() {
+	for (var i = 0; i < LessonJSON["Diagrams"].length; i++) {
+		var Temp = `<div id=\"Diagram-${i}\"></div>`;
+		LeftColumn.innerHTML = LeftColumn.innerHTML + Temp;
+		Temp = document.getElementById(`Diagram-${i}`);
+		response = await fetch(LessonJSON["Diagrams"][i]);
+		Temp.innerHTML = await response.text()
+	}
 }
 
 
