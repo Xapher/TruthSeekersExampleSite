@@ -24,6 +24,11 @@
         height: auto;
     }
 
+    .FullWidth {
+        display: none;
+    }
+
+
     .VerticalLine {
         writing-mode: vertical-lr;
         display: flex;
@@ -228,7 +233,7 @@
         }
 
         .FullWidth {
-            width: 100%;
+            width: 100% ;
         }
     }
 }
