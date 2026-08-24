@@ -9,7 +9,7 @@
 
     p, li,ul {
         font-weight: bold;
-        font-size: 40px;
+        font-size: 35px;
     }
 
 
@@ -148,6 +148,10 @@
 
     .ThirdHeight{
         height: 33%;
+    }
+
+    .ThirdWidth {
+        width: 33%;
     }
 
     .FlexRows {
