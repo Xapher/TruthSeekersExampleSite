@@ -86,7 +86,10 @@
 }
 
 
-
+#EvaluationSheet > iframe {
+    width: 100%;
+    height: inherit;
+}
 
 
 
