@@ -17,6 +17,8 @@ var WorksheetSideTwo;
 var LessonJSON;
 var LessonTranscript;
 
+var EvalSheet;
+
 window.onload = function() {
 	InitializeLessons();
   	console.log("Page fully loaded");
@@ -51,6 +53,8 @@ function InitializeLessons() {
 
 	WorksheetSideOne = document.getElementById('SideOneContainer');
 	WorksheetSideTwo = document.getElementById('SideTwoContainer');
+
+	EvalSheet = document.getElementById('EvaluationSheetFrame');
 
 	LoadLesson();
 	ShowFront();	
@@ -248,6 +252,8 @@ async function LoadLesson() {
 	LoadSheetBack();
 
 	LoadTapeAndSide();
+
+	EvalSheet.src = "./Content/LessonSheets/" + SelectedLesson + "/EvalSheet.html";
 }
 
 
