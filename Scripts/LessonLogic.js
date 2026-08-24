@@ -95,6 +95,7 @@ async function SetupDiagrams() {
 		var Temp = `<div id=\"Diagram-${i}\"></div>`;
 		LeftColumn.innerHTML = LeftColumn.innerHTML + Temp;
 		Temp = document.getElementById(`Diagram-${i}`);
+		Temp.classList.add('ZoomOut')
 		response = await fetch(LessonJSON["FileContents"]["Diagrams"][i]);
 		Temp.innerHTML = await response.text()
 	}

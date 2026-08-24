@@ -73,7 +73,7 @@
 
 
 
-#SideOneContainer, #SideTwoContainer {
+.ZoomOut {
     zoom:0.5;
     min-height: fit-content;
 }
