@@ -54,7 +54,6 @@ function InitializeLessons() {
 	EvalSheet = document.getElementById('EvaluationSheetFrame');
 
 	LoadLesson();
-	ShowFront();	
 	if(isMobile()){
 		RightColumn.classList.add('non-active');
 		LeftColumn.classList.add('active');
@@ -129,11 +128,9 @@ function LoadTapeAndSide(){
 var worksheet = 1;
 function ChangeSheetSide() {
 	if(worksheet == 1){
-		ShowBack();
 		worksheet = 2;
 	}
 	else {
-		ShowFront();
 		worksheet = 1;
 	}
 }
@@ -165,7 +162,6 @@ function PressMobileButton(argument) {
 
 function InitializeMobile(){
 	MobileFunction = ChangeMobileSheetSide;
-	ShowFront();
 	RightColumn.classList.remove('active');
 	RightColumn.classList.add('non-active');
 
@@ -218,14 +214,11 @@ async function LoadLesson() {
 
 	LessonJSON = await response.json();
 
+	SetupDiagrams();
 	SelectedTape = LessonJSON["FileContents"]["FilePath"];
   for (var i = 0; i < LessonJSON["TextTranscript"].length; i++) {
   	LessonTranscript.innerHTML += `<p id=${LessonJSON["TextTranscript"][i][0]} class=\"TranscriptText\">` + LessonJSON["TextTranscript"][i][1] + "</p>";
   }
-
-  LoadSheetFront();
-	LoadSheetBack();
-
 	LoadTapeAndSide();
 
 	EvalSheet.src = "./Content/LessonSheets/" + SelectedLesson + "/EvalSheet.html";
