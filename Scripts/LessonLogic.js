@@ -146,7 +146,17 @@ function ChangeSheetSide() {
 
 
 
+function CycleSheets() {
+	for (const node of LeftColumn.childNodes) {
+	   node.classList.add('non-active');
+	}
+	DiagramIndex++;
+	if(DiagramIndex >= LeftColumn.childNodes.length){
+		DiagramIndex = 0;
+	}
 
+	document.getElementById(`Diagram-${DiagramIndex}`).classList.remove('non-active');
+}
 
 
 
