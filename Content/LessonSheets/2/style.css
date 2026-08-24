@@ -56,10 +56,6 @@
         min-width: 48%;
     }
 
-    .FullWidth {
-        width: 100%;
-    }
-
     .FullHeight {
         height: 100%;
     }
@@ -228,6 +224,10 @@
             display: flex;
         }
         .ThirdWidth {
+            width: 100%;
+        }
+
+        .FullWidth {
             width: 100%;
         }
     }
