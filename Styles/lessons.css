@@ -55,7 +55,7 @@
 
 #lessons{
     height: 60vh; /* Desktop height calculation */
-    width: 80vw;
+    width: 95vw;
     margin-left: auto;
     margin-right: auto;
     min-height: fit-content;
