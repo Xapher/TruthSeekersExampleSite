@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		.Answer{
+			font-size: 20px;
+			display: none;
+		}
+		p{
+			font-size: 25px;
+		}
+
+		input{
+			font-size: 26px;
+		}
+	</style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Eval Sheet</title>
+</head>
+<script>
+	function ShowAnswers() {
+		// Select all elements with class "my-class"
+		const elements = document.querySelectorAll('.Answer');
+
+		// Loop using forEach (Cleanest)
+		elements.forEach(element => {
+		  element.style.display = 'contents';
+		});
+	}
+</script>
+	<body>
+		<h1>Evaluation Sheet for Lesson #2</h1>
+		<p>Your view of the lesson will be clearer if you read this sheet completely before studying the lesson.</p>
+		<p>The purpose of this sheet is to help you master the main points of the lesson. After doing the lesson, attempt to answer the questions mentally, looking back to the digrams or even replaying the audio if necessary. Then write the answers without referring to those materials.</p>
+		<p>MATCHING: In the spaces provided, type the identifying letters of the statements that match.</p>
+		<div style="display: flex;flex-direction: row;">
+			<div>
+				<p>1. <strong class="Answer">?</strong> <input type="text" size="5" maxlength="20" placeholder="T/F">A valid reason for concluding that something has always existed.</p>
+				<p>2. <strong class="Answer">?</strong> <input type="text" size="5" maxlength="20" placeholder="T/F">This is how we describe the universe, because of God's use of "natural laws".</p>
+				<p>3. <strong class="Answer">?</strong> <input type="text" size="5" maxlength="20" placeholder="T/F">This is how the bible says God made man.</p>
+				<p>4. <strong class="Answer">?</strong> <input type="text" size="5" maxlength="20" placeholder="T/F">A being that can love must also be able to hate. It must therefore have this characteristic.</p>
+				<p>5. <strong class="Answer">?</strong> <input type="text" size="5" maxlength="20" placeholder="T/F">Man was made so that he could fit into God's creation by following these.</p>
+				<p>6. <strong class="Answer">?</strong> <input type="text" size="5" maxlength="20" placeholder="T/F">God told adam that this would happen to him if he disbeyed.</p>
+				<p>7. <strong class="Answer">?</strong> <input type="text" size="5" maxlength="20" placeholder="T/F">It is lawlessness, or breaking God's law.</p>
+				<p>8. <strong class="Answer">?</strong> <input type="text" size="5" maxlength="20" placeholder="T/F">This is what sin made between man and God.</p>
+				<p>9. <strong class="Answer">?</strong> <input type="text" size="5" maxlength="20" placeholder="T/F">When man's relationship with God is broken by sin, this is his condition.</p>
+				<p>10. <strong class="Answer">?</strong> <input type="text" size="5" maxlength="20" placeholder="T/F">The number of people who have sinned.</p>
+			</div>
+			<div>
+				<p>A. God's Commands</p>
+				<p>B. The power of choice</p>
+				<p>C. All</p>
+				<p>D. It has been "Programmed"</p>
+				<p>E. He is dead</p>
+				<p>F. A separation</p>
+				<p>G. From nothing, nothing comes</p>
+				<p>H. Sin</p>
+				<p>I. He would die</p>
+				<p>J. In His image</p>
+			</div>
+		</div>
+		
+		<button onclick="ShowAnswers()" style="width:20%; height: 64px;font-size:24px;">Show Answers</button>
+	</body>
+</html>

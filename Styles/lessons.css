@@ -145,7 +145,6 @@ audio {
 @media (min-width: 768px) {
     .left-column, .right-column {
         flex: 1;
-        background: white;
         border-radius: 8px;
         
         display: flex;
