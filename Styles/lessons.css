@@ -130,6 +130,7 @@ audio {
 
 .left-column, .right-column {
     overflow-y: scroll;
+    border-radius: black 1px solid;
 }
 
 .ActiveTranscript{
@@ -170,7 +171,6 @@ audio {
 
     .left-column, .right-column {
         flex: 1;
-        background: white;
         border-radius: 8px;
         flex-direction: column;
     }
