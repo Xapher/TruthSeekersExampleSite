@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		.Answer{
+			font-size: 20px;
+			display: none;
+		}
+		p{
+			font-size: 25px;
+		}
+
+		input{
+			font-size: 26px;
+		}
+		.HorizontalSplit {
+			width: 100%;
+			height: 6px;
+			background-color: black;
+		}
+	</style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Eval Sheet</title>
+</head>
+<script>
+	function ShowAnswers() {
+		// Select all elements with class "my-class"
+		const elements = document.querySelectorAll('.Answer');
+
+		// Loop using forEach (Cleanest)
+		elements.forEach(element => {
+		  element.style.display = 'contents';
+		});
+	}
+</script>
+	<body>
+		<h1>Evaluation Sheet for Lesson #5</h1>
+		<div class="HorizontalSplit">.</div>
+		<h2>The Church (Part One)</h2>
+		<div class="HorizontalSplit">.</div>
+		<p>Your view of the lesson will be clearer if you read this sheet completely before studying the lesson.</p>
+		<p>The purpose of this sheet is to help you master the main points of the lesson. After doing the lesson, attempt to answer the questions mentally, looking back to the digrams or even replaying the audio if necessary. Then write the answers without referring to theose materials.</p>
+		<h1 style="text-decoration: underline;">Questions Over Diagram #1: The Book of Books.</h1>
+		<h1>SELECT THE CORRECT WORD FOR EACH BLANK FROM THE WORDS SUPPLIED BELOW</h1>
+		<p>1. The church we read about in the New Testament had its beginning in the city of <input type="text" size="25"> on the first <input type="text" size="25"> after Jesus' resurrection.</p>
+		<p>2. <input type="text" size="25"> said, "Upon this rock i will build my <input type="text" size="25">"</p>
+		<p>3. The church belongs to Jesus because He <input type="text" size="25"> it with His <input type="text" size="25"></p>
+		<p>4. Jesus is the <input type="text" size="25"> of the church and should have the first place in everything</p>
+		<p>5. Disciples of Jesus were called <input type="text" size="25"> for the first time in the city of <input type="text" size="25"></p>
+		<p>6. Jesus' followers were also known as <input type="text" size="25"></p>
+		<p>7. When spoken of collectively, Jesus' followers were called <input type="text" size="25"> of God or of Christ, or sometimes the <input type="text" size="25"> of Christ</p>
+
+
+		<h1>Jesus, Head, Church, Blood, Christians, Churches, Purchased, Saints, Body, Antioch, Jerusalem, Pentecost</h1>
+
+		<button onclick="ShowAnswers()" style="width:20%; height: 64px;font-size:24px;">Show Answers</button>
+	</body>
+</html>
