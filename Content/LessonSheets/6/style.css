@@ -98,7 +98,7 @@
     .Grid4x4 {
         display: grid;
         grid-template-columns: repeat(2, 1fr); /* 3 equal columns */
-        gap: 10px;
+        gap: 30px;
     }
 
     .Grid2X {
