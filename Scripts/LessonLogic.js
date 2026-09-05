@@ -152,7 +152,13 @@ function CycleSheets() {
 	}
 	DiagramIndex++;
 	if(DiagramIndex >= LeftColumn.childNodes.length){
-		DiagramIndex = 0;
+		if(isMobile()){
+			DiagramIndex = -1;
+			ShowMobileTranscript();
+		}
+		else {
+			DiagramIndex = 0;
+		}
 	}
 
 	document.getElementById(`Diagram-${DiagramIndex}`).classList.remove('non-active');
@@ -160,40 +166,7 @@ function CycleSheets() {
 
 
 
-
-
-
-
-var MobileFunction;
-
-function PressMobileButton(argument) {
-	MobileFunction();
-}
-
-
-
-
-
-function InitializeMobile(){
-	MobileFunction = ChangeMobileSheetSide;
-	RightColumn.classList.remove('active');
-	RightColumn.classList.add('non-active');
-
-	LeftColumn.classList.remove('non-active');
-	LeftColumn.classList.add('active');
-	DynamicMobileButton.textContent = "Flip Worksheet: Back";
-}
-
-function ChangeMobileSheetSide(){
-	ShowBack();
-	MobileFunction = ShowMobileTranscript;
-	DynamicMobileButton.textContent = "Switch to: Transcript";
-}
-
 function ShowMobileTranscript(){
-	MobileFunction = InitializeMobile;
-	HideFront();
-	HideBack();
 	RightColumn.classList.remove('non-active');
 	RightColumn.classList.add('active');
 	LeftColumn.classList.add('non-active');
