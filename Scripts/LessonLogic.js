@@ -151,6 +151,7 @@ function CycleSheets() {
 	  node.classList.add('non-active');
 	}
 	DiagramIndex++;
+
 	if(DiagramIndex >= LeftColumn.childNodes.length){
 		if(isMobile()){
 			DiagramIndex = -1;
@@ -161,12 +162,15 @@ function CycleSheets() {
 		}
 	}
 	if(DiagramIndex >= 0){
+		if(isMobile()) {
+			ShowMobileDiagrams();
+		}
 		document.getElementById(`Diagram-${DiagramIndex}`).classList.remove('non-active');
 	}
 }
 
 
-function ShowMobileDiagrams(argument) {
+function ShowMobileDiagrams() {
 	RightColumn.classList.add('non-active');
 	RightColumn.classList.remove('active');
 	LeftColumn.classList.remove('non-active');
