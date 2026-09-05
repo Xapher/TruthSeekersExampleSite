@@ -174,7 +174,7 @@ function ShowMobileDiagrams() {
 	RightColumn.classList.add('non-active');
 	RightColumn.classList.remove('active');
 	LeftColumn.classList.remove('non-active');
-	LeftColumn.classList.addEventListener('active');
+	LeftColumn.classList.add('active');
 	DynamicMobileButton.textContent = "Cycle Worksheets";
 }
 
