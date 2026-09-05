@@ -160,11 +160,19 @@ function CycleSheets() {
 			DiagramIndex = 0;
 		}
 	}
-
-	document.getElementById(`Diagram-${DiagramIndex}`).classList.remove('non-active');
+	if(DiagramIndex >= 0){
+		document.getElementById(`Diagram-${DiagramIndex}`).classList.remove('non-active');
+	}
 }
 
 
+function ShowMobileDiagrams(argument) {
+	RightColumn.classList.add('non-active');
+	RightColumn.classList.remove('active');
+	LeftColumn.classList.remove('non-active');
+	LeftColumn.classList.addEventListener('active');
+	DynamicMobileButton.textContent = "Cycle Worksheets";
+}
 
 function ShowMobileTranscript(){
 	RightColumn.classList.remove('non-active');
