@@ -57,7 +57,6 @@ function InitializeLessons() {
 	if(isMobile()){
 		RightColumn.classList.add('non-active');
 		LeftColumn.classList.add('active');
-		InitializeMobile();
 	}
 	
 
