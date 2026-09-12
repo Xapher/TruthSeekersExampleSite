@@ -28,6 +28,10 @@
     width: calc-size(stretch, size - 25%);
 }
 
+.DownloadCard {
+    justify-items: center;
+}
+
 
 @media(orientation: landscape){
     .DownloadGrid {
@@ -36,20 +40,12 @@
 
         gap: 5px;
     }
-
-    .DownloadCard {
-        height: 350px;
-    }
 }
 
 @media (orientation: portrait) {
     /* Adjust buttons for very small screens */
     .buttons-sidebar {
         grid-template-columns: 1fr; /* 1 button per row */
-    }
-
-    .DownloadCard {
-        height: 350px;
     }
 
     .DownloadGrid {
