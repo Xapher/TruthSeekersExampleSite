@@ -20,16 +20,20 @@ async function RequestJSON(argument) {
 	PopulateDownloads();
 }
 
+function ClickDownload() {
+	// body...
+}
+
 function PopulateDownloads(){
 	//populate preview with containers
 	//Diagram, Evaluation, TapeFront, TapeBack
 	//FullLesson
 	DownloadContainer.innerHTML = "";
-	DownloadContainer.innerHTML += "<button class=\"DownloadCard\"><a download href=\"" + DownloadJSON["Diagram"] + "\">Download Diagrams</a></button>";
-	DownloadContainer.innerHTML += "<button class=\"DownloadCard\"><a download href=\"" + DownloadJSON["Evaluation"] + "\">Download Eval Sheets</a></button>";
-	DownloadContainer.innerHTML += "<button class=\"DownloadCard\"><a download href=\"" + DownloadJSON["FullLesson"] + "\">Download Full Pack</a></button>";
-	DownloadContainer.innerHTML += "<button class=\"DownloadCard\"><a download href=\"" + DownloadJSON["TapeFront"] + "\">Download Audio Part One</a></button>";
-	DownloadContainer.innerHTML += "<button class=\"DownloadCard\"><a download href=\"" + DownloadJSON["TapeBack"] + "\">Download Audio Part Two</a></button>";
+	DownloadContainer.innerHTML += "<button onclick=\"this.parentElement.children[0].click()\" class=\"DownloadCard\"><a download style=\"display:none;\" href=\"" + DownloadJSON["Diagram"] + "\">Download Diagrams</a></button>";
+	DownloadContainer.innerHTML += "<button onclick=\"this.parentElement.children[0].click()\" class=\"DownloadCard\"><a download style=\"display:none;\" href=\"" + DownloadJSON["Evaluation"] + "\">Download Eval Sheets</a></button>";
+	DownloadContainer.innerHTML += "<button onclick=\"this.parentElement.children[0].click()\" class=\"DownloadCard\"><a download style=\"display:none;\" href=\"" + DownloadJSON["FullLesson"] + "\">Download Full Pack</a></button>";
+	DownloadContainer.innerHTML += "<button onclick=\"this.parentElement.children[0].click()\" class=\"DownloadCard\"><a download style=\"display:none;\" href=\"" + DownloadJSON["TapeFront"] + "\">Download Audio Part One</a></button>";
+	DownloadContainer.innerHTML += "<button onclick=\"this.parentElement.children[0].click()\" class=\"DownloadCard\"><a download style=\"display:none;\" href=\"" + DownloadJSON["TapeBack"] + "\">Download Audio Part Two</a></button>";
 }
 
 function QuickDownloadAll() {
