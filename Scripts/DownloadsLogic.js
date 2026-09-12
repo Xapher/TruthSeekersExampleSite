@@ -29,11 +29,11 @@ function PopulateDownloads(){
 	//Diagram, Evaluation, TapeFront, TapeBack
 	//FullLesson
 	DownloadContainer.innerHTML = "";
-	DownloadContainer.innerHTML += "<button onclick=\"this.children[0].click()\" class=\"DownloadCard\"><a download style=\"display:none;\" href=\"" + DownloadJSON["Diagram"] + "\">Download Diagrams</a><p>Diagram: </p><img src=\"\"><p>Download</p></button>";
-	DownloadContainer.innerHTML += "<button onclick=\"this.children[0].click()\" class=\"DownloadCard\"><a download style=\"display:none;\" href=\"" + DownloadJSON["Evaluation"] + "\">Download Eval Sheets</a><p>Diagram: </p><img src=\"\"><p>Download</p></button>";
-	DownloadContainer.innerHTML += "<button onclick=\"this.children[0].click()\" class=\"DownloadCard\"><a download style=\"display:none;\" href=\"" + DownloadJSON["FullLesson"] + "\">Download Full Pack</a><p>Diagram: </p><img src=\"\"><p>Download</p></button>";
-	DownloadContainer.innerHTML += "<button onclick=\"this.children[0].click()\" class=\"DownloadCard\"><a download style=\"display:none;\" href=\"" + DownloadJSON["TapeFront"] + "\">Download Audio Part One</a><p>Diagram: </p><img src=\"\"><p>Download</p></button>";
-	DownloadContainer.innerHTML += "<button onclick=\"this.children[0].click()\" class=\"DownloadCard\"><a download style=\"display:none;\" href=\"" + DownloadJSON["TapeBack"] + "\">Download Audio Part Two</a><p>Diagram: </p><img src=\"\"><p>Download</p></button>";
+	DownloadContainer.innerHTML += "<button onclick=\"this.children[0].click()\" class=\"DownloadCard\"><a download style=\"display:none;\" href=\"" + DownloadJSON["Diagram"] + "\">Download Diagrams</a><p>Diagram: </p><img src=\"./Content/Images/sin.png\"><p>Download</p></button>";
+	DownloadContainer.innerHTML += "<button onclick=\"this.children[0].click()\" class=\"DownloadCard\"><a download style=\"display:none;\" href=\"" + DownloadJSON["Evaluation"] + "\">Download Eval Sheets</a><p>Diagram: </p><img src=\"./Content/Images/sin.png\"><p>Download</p></button>";
+	DownloadContainer.innerHTML += "<button onclick=\"this.children[0].click()\" class=\"DownloadCard\"><a download style=\"display:none;\" href=\"" + DownloadJSON["FullLesson"] + "\">Download Full Pack</a><p>Diagram: </p><img src=\"./Content/Images/sin.png\"><p>Download</p></button>";
+	DownloadContainer.innerHTML += "<button onclick=\"this.children[0].click()\" class=\"DownloadCard\"><a download style=\"display:none;\" href=\"" + DownloadJSON["TapeFront"] + "\">Download Audio Part One</a><p>Diagram: </p><img src=\"./Content/Images/sin.png\"><p>Download</p></button>";
+	DownloadContainer.innerHTML += "<button onclick=\"this.children[0].click()\" class=\"DownloadCard\"><a download style=\"display:none;\" href=\"" + DownloadJSON["TapeBack"] + "\">Download Audio Part Two</a><p>Diagram: </p><img src=\"./Content/Images/sin.png\"><p>Download</p></button>";
 }
 
 function QuickDownloadAll() {
