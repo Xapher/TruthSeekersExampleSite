@@ -24,11 +24,19 @@
     min-height: 500px;
     overflow: hidden;
 }
-.DownloadGrid {
-    display: grid;
-    grid-template-columns:  auto auto auto auto auto;
+
+.DownloadCard {
+    height: 256px;
+    width: 182px;
 }
 
+
+@media(orientation: landscape){
+    .DownloadGrid {
+        display: grid;
+        grid-template-columns:  auto auto auto auto auto;
+    }
+}
 
 @media (orientation: portrait) {
     /* Adjust buttons for very small screens */

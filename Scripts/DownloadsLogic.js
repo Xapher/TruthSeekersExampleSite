@@ -25,11 +25,11 @@ function PopulateDownloads(){
 	//Diagram, Evaluation, TapeFront, TapeBack
 	//FullLesson
 	DownloadContainer.innerHTML = "";
-	DownloadContainer.innerHTML += "<div><a download href=\"" + DownloadJSON["Diagram"] + "\">Download Diagrams</a></div>";
-	DownloadContainer.innerHTML += "<div><a download href=\"" + DownloadJSON["Evaluation"] + "\">Download Eval Sheets</a></div>";
-	DownloadContainer.innerHTML += "<div><a download href=\"" + DownloadJSON["FullLesson"] + "\">Download Full Pack</a></div>";
-	DownloadContainer.innerHTML += "<div><a download href=\"" + DownloadJSON["TapeFront"] + "\">Download Audio Part One</a></div>";
-	DownloadContainer.innerHTML += "<div><a download href=\"" + DownloadJSON["TapeBack"] + "\">Download Audio Part Two</a></div>";
+	DownloadContainer.innerHTML += "<button class=\"DownloadCard\"><a download href=\"" + DownloadJSON["Diagram"] + "\">Download Diagrams</a></button>";
+	DownloadContainer.innerHTML += "<button class=\"DownloadCard\"><a download href=\"" + DownloadJSON["Evaluation"] + "\">Download Eval Sheets</a></button>";
+	DownloadContainer.innerHTML += "<button class=\"DownloadCard\"><a download href=\"" + DownloadJSON["FullLesson"] + "\">Download Full Pack</a></button>";
+	DownloadContainer.innerHTML += "<button class=\"DownloadCard\"><a download href=\"" + DownloadJSON["TapeFront"] + "\">Download Audio Part One</a></button>";
+	DownloadContainer.innerHTML += "<button class=\"DownloadCard\"><a download href=\"" + DownloadJSON["TapeBack"] + "\">Download Audio Part Two</a></button>";
 }
 
 function QuickDownloadAll() {
