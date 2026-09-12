@@ -105,7 +105,7 @@ button {
 }
 
 button:hover, .ActiveButton {
-    background-color: var(--primary);
+    background-color: #4444DD;
     color: white;
     border-color: var(--primary);
 }
