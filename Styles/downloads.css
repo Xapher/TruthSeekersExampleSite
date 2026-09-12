@@ -1,0 +1,43 @@
+/* Downloads Page */
+.downloads-layout {
+    display: flex;
+    gap: 1.5rem;
+    flex: 1;
+    margin-top: 1.5rem;
+}
+
+.buttons-sidebar {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.preview-area {
+    flex: 1;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+    overflow: hidden;
+}
+.DownloadGrid {
+    display: grid;
+    grid-template-columns:  auto auto auto auto auto;
+}
+
+
+@media (orientation: portrait) {
+    /* Adjust buttons for very small screens */
+    .buttons-sidebar {
+        grid-template-columns: 1fr; /* 1 button per row */
+    }
+
+    .DownloadGrid {
+        display: grid;
+        grid-template-rows:  auto auto auto auto auto;
+    }
+}

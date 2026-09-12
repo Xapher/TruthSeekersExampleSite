@@ -1,0 +1,146 @@
+ /* Base Styles */
+:root {
+    --primary: #000041;
+    --bg-color: #f8fafc;
+    --text-color: #1e293b;
+    --border-color: #2f425c;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.Blue{ 
+    color: var(--primary);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header & Icon */
+header {
+    text-align: center;
+    padding: 1.5rem 1rem 1rem;
+    background-color: white;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.icon-placeholder {
+    max-width: 256px;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.5rem auto;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header h1 {
+    font-size: 1.25rem;
+    color: var(--text-color);
+}
+
+/* Navigation */
+nav {
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 28px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bolder;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: background 0.2s;
+    text-align: center;
+    border: 4px solid var(--border-color);
+}
+
+nav a:hover, nav a.active {
+    background-color: #000041;
+    color: white;
+}
+
+
+
+.active{
+    visibility: visible;
+}
+
+
+.non-active {
+    display: none;
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+}
+
+
+button {
+    padding: 1rem;
+    background-color: white;
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+button:hover, .ActiveButton {
+    background-color: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+@media (orientation: landscape) {
+    .mobile {
+        visibility: hidden;
+    }
+
+    .widescreen {
+        visibility: visible;
+    }
+}
+
+p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@media (orientation: portrait) {
+    .mobile {
+        visibility: visible;
+    }
+
+    .widescreen {
+        visibility: hidden;
+    }
+}
+
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img{
+    max-width: 100%;
+    display: flex;
+}

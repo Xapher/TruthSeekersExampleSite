@@ -1,0 +1,186 @@
+/* Audio Player Locked to Bottom */
+.audio-player-container {
+    min-height: 64px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border-top: 1px solid var(--border-color);
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+}
+
+#DesktopSwitcher {
+    min-height: 64px;   
+    position: fixed;
+    bottom: 60px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border-top: 2px solid var(--border-color);
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+}
+
+#MobileSwitcher {
+    min-height: 64px;
+    position: fixed;
+    bottom: 60px;
+    left: 0;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+}
+
+
+#WorkSheetSwitcher {
+    float:left;
+}
+
+#TranscriptSwitcher {
+    float: right;
+}
+
+#lessons{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: fit-content;
+    margin-bottom: 100px;
+}
+
+#LessonTranscript{
+    padding: 15px;
+}
+
+#LessonTranscript > p {
+    margin-top: 25px;
+}
+
+
+
+
+.ZoomOut {
+    zoom:0.5;
+    min-height: fit-content;
+}
+
+
+
+
+#EvaluationSheet {
+    width: 80%;
+    height: 1920px;
+    margin-bottom: 100px;
+}
+
+
+#EvaluationSheet > iframe {
+    width: 100%;
+    height: inherit;
+}
+
+
+
+
+.split-layout {
+    display: flex;
+    gap: 1.5rem;
+    flex: 1;
+    justify-content: center;
+}
+
+.audio-player-container a {
+    height: 100%;
+}
+
+audio {
+    width: 100%;
+    max-width: 800px;
+    height: 40px; /* slightly compacter on mobile */
+}
+
+
+#MobileLessonNav{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    scale: 0.8;
+}
+
+#MobileLessonNav > button {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.left-column, .right-column {
+    overflow-y: scroll;
+    border: black 1px solid;
+    max-height: 1024px;
+}
+
+.ActiveTranscript{
+    background-color: #DDDDFF;
+    border-radius: 5px;
+    border: blue 2px solid;
+    padding: 5px;
+    margin: 5px;
+}
+
+
+@media (orientation: landscape) {
+    .left-column, .right-column {
+        flex: 1;
+        border-radius: 8px;
+        
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+@media (orientation: portrait) {
+
+    /* Stack the lessons split screen */
+    .split-layout {
+        display: block;
+        padding-bottom: 100px;
+    }
+
+    #lessons{
+        margin: 0;
+        width: 100%;
+        padding-bottom: 0px;
+    }
+
+    .left-column, .right-column {
+        flex: 1;
+        border-radius: 8px;
+        flex-direction: column;
+    }
+
+    /* Stack the downloads layout */
+    .downloads-layout {
+        flex-direction: column;
+    }
+
+    .buttons-sidebar {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 2 buttons per row on mobile to save space */
+        gap: 0.5rem;
+    }
+
+    #EvaluationSheet {
+        width: 100%;
+    }
+}

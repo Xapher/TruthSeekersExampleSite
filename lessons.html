@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Of The Bible - Lessons</title>
+    <link rel="stylesheet" type="text/css" href="GlobalStyle.css">
+    <link rel="stylesheet" type="text/css" href="./Styles/lessons.css">
+    <script src="./Scripts/LessonLogic.js"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="icon-placeholder">
+            <a href="index.html"><img src="icon.png"></a>
+        </div>
+        <h1>There is one body and one spirit, one Lord, one faith, one baptism; one God and Father of all, who is over all and trhough all and in all</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="nav-link" id="nav-home">Home</a>
+        <a href="lessons.html" class="nav-link" id="nav-lessons">Lessons</a>
+        <a href="downloads.html" class="nav-link" id="nav-downloads">Downloads</a>
+    </nav>
+
+
+	<section id="lessons" class="page">
+        <div id="MobileLessonNav" class="centered">
+            <h1>Lesson:</h1>
+            <button onclick="ChangeLesson(1)">1</button>
+            <button onclick="ChangeLesson(2)">2</button>
+            <button onclick="ChangeLesson(3)">3</button>
+            <button onclick="ChangeLesson(4)">4</button>
+            <button onclick="ChangeLesson(5)">5</button>
+            <button onclick="ChangeLesson(6)">6</button>
+        </div>
+        <div class="split-layout">
+            <!-- Left: PDF Worksheet -->
+            <div id="LeftColumn" class="left-column"></div>
+            
+            <!-- Right: Transcript -->
+            <div id="RightColumn" class="right-column">
+                <h2>Lesson Transcript</h2>
+                <p id="LessonTranscript" style="margin-top: 1rem; line-height: 1.8;">
+                    
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="EvaluationSheet" class="centered">
+        <iframe id="EvaluationSheetFrame" src=""></iframe>
+    </section>
+
+    <div class="widescreen" id="DesktopSwitcher">
+        <button onclick="CycleSheets()" id="WorkSheetSwitcher">Cycle Worksheet</button>
+        <button id="TapeSide" onclick="SwitchSides()">Flip Tape: 2</button>
+    </div>
+
+    <div class="mobile" id="MobileSwitcher">
+        <button onclick="CycleSheets()" id="MobileWorkSheetSwitcher">Cycle Worksheet</button>
+        <button id="TapeSideMobile" onclick="SwitchSides()">Flip Tape: 2</button>
+    </div>
+    <div class="audio-player-container" id="global-audio-player">
+        
+        <audio id="LessonPlayer" controls>
+            <source src="" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+    </div>
+
+</body>
+</html>
