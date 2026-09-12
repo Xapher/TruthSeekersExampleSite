@@ -24,8 +24,10 @@ function PopulateDownloads(){
 	//populate preview with containers
 	//Diagram, Evaluation, TapeFront, TapeBack
 	//FullLesson
-	DownloadContainer.innerHTML += "<div>test</div>";
-
+	DownloadContainer.innerHTML = "";
+	DownloadContainer.innerHTML += "<div><a href=\"" + DownloadJSON["Diagram"] + "\">Download Diagrams</a></div>";
+	DownloadContainer.innerHTML += "<div><a href=\"" + DownloadJSON["Evaluation"] + "\">Download Eval Sheets</a></div>";
+	DownloadContainer.innerHTML += "<div><a href=\"" + DownloadJSON["FullLesson"] + "\">Download Full Pack</a></div>";
 }
 
 function QuickDownloadAll() {
