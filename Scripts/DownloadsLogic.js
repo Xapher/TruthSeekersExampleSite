@@ -25,9 +25,11 @@ function PopulateDownloads(){
 	//Diagram, Evaluation, TapeFront, TapeBack
 	//FullLesson
 	DownloadContainer.innerHTML = "";
-	DownloadContainer.innerHTML += "<div><a href=\"" + DownloadJSON["Diagram"] + "\">Download Diagrams</a></div>";
-	DownloadContainer.innerHTML += "<div><a href=\"" + DownloadJSON["Evaluation"] + "\">Download Eval Sheets</a></div>";
-	DownloadContainer.innerHTML += "<div><a href=\"" + DownloadJSON["FullLesson"] + "\">Download Full Pack</a></div>";
+	DownloadContainer.innerHTML += "<div><a download href=\"" + DownloadJSON["Diagram"] + "\">Download Diagrams</a></div>";
+	DownloadContainer.innerHTML += "<div><a download href=\"" + DownloadJSON["Evaluation"] + "\">Download Eval Sheets</a></div>";
+	DownloadContainer.innerHTML += "<div><a download href=\"" + DownloadJSON["FullLesson"] + "\">Download Full Pack</a></div>";
+	DownloadContainer.innerHTML += "<div><a download href=\"" + DownloadJSON["TapeFront"] + "\">Download Audio Part One</a></div>";
+	DownloadContainer.innerHTML += "<div><a download href=\"" + DownloadJSON["TapeBack"] + "\">Download Audio Part Two</a></div>";
 }
 
 function QuickDownloadAll() {
