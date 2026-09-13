@@ -34,7 +34,9 @@ function PopulateDownloads(){
 	DownloadContainer.innerHTML += "<button onclick=\"this.children[0].click()\" class=\"DownloadCard\"><a download style=\"display:none;\" href=\"" + DownloadJSON["Diagram"] + "\">Download Diagrams</a><p>Diagram: #" + SelectedLesson + "</p><img src=\"./Content/Images/DiagramIcon.png\"><img src=\"./Content/Images/DownloadButton.png\"></button>";
 	DownloadContainer.innerHTML += "<button onclick=\"this.children[0].click()\" class=\"DownloadCard\"><a download style=\"display:none;\" href=\"" + DownloadJSON["Evaluation"] + "\">Download Eval Sheets</a><p>Evaluation Sheet: #" + SelectedLesson + "</p><img src=\"./Content/Images/EvalDownload.png\"><img src=\"./Content/Images/DownloadButton.png\"></button>";
 	DownloadContainer.innerHTML += "<button onclick=\"this.children[0].click()\" class=\"DownloadCard\"><a download style=\"display:none;\" href=\"" + DownloadJSON["TapeFront"] + "\">Download Audio Part One</a><p>Audio Part One: #" + SelectedLesson + "</p><img src=\"./Content/Images/DownloadAudio.png\"><img src=\"./Content/Images/DownloadButton.png\"></button>";
-	DownloadContainer.innerHTML += "<button onclick=\"this.children[0].click()\" class=\"DownloadCard\"><a download style=\"display:none;\" href=\"" + DownloadJSON["TapeBack"] + "\">Download Audio Part Two</a><p>Audio Part Two: #" + SelectedLesson + "</p><img src=\"./Content/Images/DownloadAudio.png\"><img src=\"./Content/Images/DownloadButton.png\"></button>";
+	if(SelectedLesson != 5){
+		DownloadContainer.innerHTML += "<button onclick=\"this.children[0].click()\" class=\"DownloadCard\"><a download style=\"display:none;\" href=\"" + DownloadJSON["TapeBack"] + "\">Download Audio Part Two</a><p>Audio Part Two: #" + SelectedLesson + "</p><img src=\"./Content/Images/DownloadAudio.png\"><img src=\"./Content/Images/DownloadButton.png\"></button>";
+	}
 }
 
 function QuickDownloadAll() {
