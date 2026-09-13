@@ -10,9 +10,9 @@ window.onload = function() {
 
 function LoadDownloads(argument){
 	for (var i = 1; i < 7; i++) {
-		document.getElementById('LessonButton' + i).className.remove("ActiveButton");
+		document.getElementById('LessonButton' + i).classList.remove("ActiveButton");
 	}
-	document.getElementById('LessonButton' + argument).className.add("ActiveButton");
+	document.getElementById('LessonButton' + argument).classList.add("ActiveButton");
 
 	RequestJSON(argument);
 }
