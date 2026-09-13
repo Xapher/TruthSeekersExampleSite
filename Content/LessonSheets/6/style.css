@@ -97,20 +97,6 @@
         gap: 10px;
     }
 
-    .Grid4x4 {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 3 equal columns */
-        gap: 30px;
-    }
-
-    .Grid2X {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr); /* 3 equal columns */
-        gap: 10px;
-        padding: 5%;
-    }
-
-
     .WhiteDiagram {
         background: white;
     }
@@ -173,6 +159,12 @@
         p{
             font-size: 32px;
         }
+
+        .Grid4x4 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 3 equal columns */
+        gap: 30px;
+    }
     }
 
 
