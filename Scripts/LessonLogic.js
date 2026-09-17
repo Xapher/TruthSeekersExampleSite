@@ -21,6 +21,16 @@ window.onload = function() {
   	console.log("Page fully loaded");
 };
 
+var LessonTitles = [
+	"Book of Books/The Incomparable Book",
+	"A Relationship Broken",
+	"Redemption",
+	"Salvation in Christ",
+	"The Church (Part One)",
+	"The Church (Part Two)"
+];
+
+
 var response;
 
 var TimeBegin = -1;
@@ -40,6 +50,9 @@ function InitializeLessons() {
 		SelectedLesson = 1;
 	}
 
+	document.getElementById('LessonChange' + SelectedLesson).classList.add('ActiveButton');
+	document.getElementById('LessonTitle').innerHTML = LessonTitles[SelectedLesson - 1];
+	document.getElementById('TranscriptLabel').innerHTML = LessonTitles[SelectedLesson - 1] + " Transcript";
 	LessonAudio = document.getElementById('LessonPlayer');
 	FlipButton = document.getElementById('TapeSide');
 	MobileFlipButton = document.getElementById('TapeSideMobile');

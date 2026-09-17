@@ -37,8 +37,10 @@
             <button id="LessonChange5" onclick="ChangeLesson(5)">5</button>
             <button id="LessonChange6" onclick="ChangeLesson(6)">6</button>
         </div>
-        <h1>Diagram:</h1>
-        <h1>Transcript</h1>
+        <div>
+            <h1 style="float: left;">Diagram:</h1>
+            <h1 style="text-align: end;">Transcript:</h1>
+        </div>
         <div class="split-layout">
             <!-- Left: PDF Worksheet -->
             
@@ -47,7 +49,7 @@
             <!-- Right: Transcript -->
             
             <div id="RightColumn" class="right-column">
-                <h2>Lesson Transcript</h2>
+                <h2 id="TranscriptLabel">Lesson Transcript</h2>
                 <div id="LessonTranscript">
                     
                 </div>
@@ -60,7 +62,7 @@
     </section>
 
     <div class="widescreen" id="DesktopSwitcher">
-        <button onclick="CycleSheets()" id="WorkSheetSwitcher">Cycle Worksheet</button>
+        <button onclick="CycleSheets()" id="WorkSheetSwitcher">Change Diagram</button>
         <button id="TapeSide" onclick="SwitchSides()">Flip Tape: 2</button>
     </div>
 
