@@ -12,7 +12,7 @@
         font-size: 35px;
     }
 
-    li {
+    ul, ol {
         margin: 0 auto;
     }
 
