@@ -83,6 +83,18 @@ function InitializeLessons() {
 	LessonAudio.addEventListener('seeked', () => {
 	    for (var i = 0; i < LessonTranscript.childNodes.length; i++) {
 		  	LessonTranscript.childNodes[i].classList.remove('ActiveTranscript');
+		  	TempID = LessonTranscript.childNodes[i].id;
+		  	TimeBegin = parseFloat(TempID.split('-')[0]);
+			  TimeEnd = parseFloat(TempID.split('-')[1]);
+			  if(LessonAudio.currentTime >= TimeBegin && LessonAudio.currentTime < TimeEnd && i != LastIndex){
+			  	LessonTranscript.childNodes[i].classList.add('ActiveTranscript');
+			  	LessonTranscript.childNodes[i].scrollIntoView({ 
+					  behavior: 'smooth', 
+					  block: 'center',  
+					  inline: 'nearest' 
+					});
+					LastIndex = i;
+			  }
 	  	}
 	});
 
