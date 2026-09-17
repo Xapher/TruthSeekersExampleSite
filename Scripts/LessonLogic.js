@@ -15,6 +15,7 @@ var LessonTranscript;
 var DiagramIndex = 0;
 var EvalSheet;
 
+var QuickAudioControls;
 
 window.onload = function() {
 	InitializeLessons();
@@ -55,6 +56,7 @@ function InitializeLessons() {
 		document.getElementById('MobileSwitcher').classList.add('non-active');
 	}
 
+	QuickAudioControls = document.getElementById('TranscriptAudioControls');	
 	document.getElementById('LessonChange' + SelectedLesson).classList.add('ActiveButton');
 	document.getElementById('LessonTitle').innerHTML = LessonTitles[SelectedLesson - 1];
 	document.getElementById('TranscriptLabel').innerHTML = LessonTitles[SelectedLesson - 1] + " Transcript";
@@ -261,4 +263,16 @@ async function LoadLesson() {
 
 function ChangeLesson(lesson){
 	window.location.href = "https://xapher.github.io/TruthSeekersExampleSite/lessons.html?i=" + lesson;
+}
+
+
+function ToggleAudioFromTranscript(){
+	if(LessonAudio.paused){
+		LessonAudio.play();
+		QuickAudioControls.innerHTML = "Pause";
+	}
+	else {
+		LessonAudio.pause();
+		QuickAudioControls.innerHTML = "Play";
+	}
 }
