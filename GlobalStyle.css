@@ -87,6 +87,7 @@ nav a:hover, nav a.active {
 
 .non-active {
     display: none;
+    visibility: hidden !important;
     visibility: hidden;
     width: 0px;
     height: 0px;

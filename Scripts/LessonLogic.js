@@ -52,8 +52,8 @@ function InitializeLessons() {
 	}
 
 	if(SelectedLesson != 1){
-		document.getElementById('DesktopSwitcher').disabled = true;
-		document.getElementById('MobileSwitcher').disabled = true;
+		document.getElementById('DesktopSwitcher').classList.add('non-active');
+		document.getElementById('MobileSwitcher').classList.add('non-active');
 	}
 
 	QuickAudioControls = document.getElementById('TranscriptAudioControls');	
@@ -240,6 +240,9 @@ async function LoadLesson() {
 
 	SetupDiagrams();
 	SelectedTape = LessonJSON["FileContents"]["FilePath"];
+	if(!SelectedTape.includes("_Side_")){
+		MobileFlipButton.disabled = true;
+	}
   for (var i = 0; i < LessonJSON["TextTranscript"].length; i++) {
   	if (LessonJSON["TextTranscript"][i][0] === "") {
 		  LessonTranscript.innerHTML += `<h1 id=${LessonJSON["TextTranscript"][i][0]} class=\"TranscriptText\">` + LessonJSON["TextTranscript"][i][1] + "</h1>";
