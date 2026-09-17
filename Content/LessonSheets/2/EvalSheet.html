@@ -33,6 +33,12 @@
 		elements.forEach(element => {
 		  element.style.display = 'contents';
 		});
+
+		setTimeout(() => {
+		  elements.forEach(element => {
+			  element.style.display = 'none';
+			});
+		}, 10000);
 	}
 </script>
 	<body>
