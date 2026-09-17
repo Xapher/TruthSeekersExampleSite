@@ -231,7 +231,12 @@ async function LoadLesson() {
 		MobileFlipButton.disabled = true;
 	}
   for (var i = 0; i < LessonJSON["TextTranscript"].length; i++) {
-  	LessonTranscript.innerHTML += `<p id=${LessonJSON["TextTranscript"][i][0]} class=\"TranscriptText\">` + LessonJSON["TextTranscript"][i][1] + "</p>";
+  	if (LessonJSON["TextTranscript"][i][0] === "") {
+		  LessonTranscript.innerHTML += `<h1 id=${LessonJSON["TextTranscript"][i][0]} class=\"TranscriptText\">` + LessonJSON["TextTranscript"][i][1] + "</h1>";
+		}
+  	else {
+  		LessonTranscript.innerHTML += `<p id=${LessonJSON["TextTranscript"][i][0]} class=\"TranscriptText\">` + LessonJSON["TextTranscript"][i][1] + "</p>";
+  	}
   }
 	LoadTapeAndSide();
 
