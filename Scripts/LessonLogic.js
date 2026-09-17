@@ -78,28 +78,6 @@ function InitializeLessons() {
 		RightColumn.classList.add('non-active');
 		LeftColumn.classList.add('active');
 	}
-	
-
-	LessonAudio.addEventListener('seeked', () => {
-	    for (var i = 0; i < LessonTranscript.childNodes.length; i++) {
-		  	LessonTranscript.childNodes[i].classList.remove('ActiveTranscript');
-	  	}
-
-	  	for (var i = 0; i < LessonTranscript.childNodes.length; i++) {
-		  	TempID = LessonTranscript.childNodes[i].id;
-		  	TimeBegin = parseFloat(TempID.split('-')[0]);
-			  TimeEnd = parseFloat(TempID.split('-')[1]);
-			  if(LessonAudio.currentTime >= TimeBegin && LessonAudio.currentTime < TimeEnd && i != LastIndex){
-			  	LessonTranscript.childNodes[i].classList.add('ActiveTranscript');
-			  	LessonTranscript.childNodes[i].scrollIntoView({ 
-					  behavior: 'smooth', 
-					  block: 'center',  
-					  inline: 'nearest' 
-					});
-					LastIndex = i;
-			  }
-	  	}
-	});
 
 
 	LessonAudio.addEventListener('timeupdate', () => {
