@@ -50,6 +50,11 @@ function InitializeLessons() {
 		SelectedLesson = 1;
 	}
 
+	if(SelectedLesson != 1){
+		document.getElementById('DesktopSwitcher').classList.add('non-active');
+		document.getElementById('MobileSwitcher').classList.add('non-active');
+	}
+
 	document.getElementById('LessonChange' + SelectedLesson).classList.add('ActiveButton');
 	document.getElementById('LessonTitle').innerHTML = LessonTitles[SelectedLesson - 1];
 	document.getElementById('TranscriptLabel').innerHTML = LessonTitles[SelectedLesson - 1] + " Transcript";
