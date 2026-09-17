@@ -138,6 +138,7 @@ p {
 .centered {
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 
 img{
