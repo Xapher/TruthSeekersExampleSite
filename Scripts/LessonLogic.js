@@ -73,10 +73,16 @@ function InitializeLessons() {
 	}
 	
 
+	LessonAudio.addEventListener('seeked', () => {
+	    for (var i = 0; i < LessonTranscript.childNodes.length; i++) {
+		  	LessonTranscript.childNodes[i].classList.remove('ActiveTranscript');
+	  	}
+	});
+
 
 	LessonAudio.addEventListener('timeupdate', () => {
 	  // Execute code continuously while playing
-	  console.log(`Current time: ${LessonAudio.currentTime}`);
+	  //console.log(`Current time: ${LessonAudio.currentTime}`);
 	  //Eh, get some of the <p> ids and compare it to time for active boxes
 	  for (var i = 0; i < LessonTranscript.childNodes.length; i++) {
 	  	if(i != LastIndex) {
