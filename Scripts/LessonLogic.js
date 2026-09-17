@@ -121,26 +121,8 @@ async function SetupDiagrams() {
 
 
 
-
-
-
-function SwitchSides(){
-	if (TapeSide == 1) {
-		TapeSide = 2;
-		FlipButton.innerHTML = "Flip Tape: 1";
-		MobileFlipButton.innerHTML = "Flip Tape: 1";
-	}
-	else {
-		TapeSide = 1;
-		FlipButton.innerHTML = "Flip Tape: 2";
-		MobileFlipButton.innerHTML = "Flip Tape: 2";
-	}
-
-	LoadTapeAndSide();
-}
-
 function LoadTapeAndSide(){
-	LessonAudio.src = BaseDir + SelectedTape.replace("_Side_", TapeSide);
+	LessonAudio.src = BaseDir + SelectedTape;
 	LessonAudio.load();
 }
 
