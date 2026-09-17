@@ -83,6 +83,9 @@ function InitializeLessons() {
 	LessonAudio.addEventListener('seeked', () => {
 	    for (var i = 0; i < LessonTranscript.childNodes.length; i++) {
 		  	LessonTranscript.childNodes[i].classList.remove('ActiveTranscript');
+	  	}
+
+	  	for (var i = 0; i < LessonTranscript.childNodes.length; i++) {
 		  	TempID = LessonTranscript.childNodes[i].id;
 		  	TimeBegin = parseFloat(TempID.split('-')[0]);
 			  TimeEnd = parseFloat(TempID.split('-')[1]);
