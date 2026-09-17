@@ -240,9 +240,6 @@ async function LoadLesson() {
 
 	SetupDiagrams();
 	SelectedTape = LessonJSON["FileContents"]["FilePath"];
-	if(!SelectedTape.includes("_Side_")){
-		MobileFlipButton.disabled = true;
-	}
   for (var i = 0; i < LessonJSON["TextTranscript"].length; i++) {
   	if (LessonJSON["TextTranscript"][i][0] === "") {
 		  LessonTranscript.innerHTML += `<h1 id=${LessonJSON["TextTranscript"][i][0]} class=\"TranscriptText\">` + LessonJSON["TextTranscript"][i][1] + "</h1>";
